@@ -1,9 +1,9 @@
 {
-    "name": "laravel/laravel",
+    "name": "arifszn/pandora",
     "type": "project",
-    "description": "The Laravel Framework.",
-    "keywords": ["framework", "laravel"],
+    "description": "REST API starter kit built with Laravel, OpenAPI, Sanctum.",
     "license": "MIT",
+    "homepage": "https://github.com/arifszn/pandora",
     "require": {
         "php": "^8.0.2",
         "guzzlehttp/guzzle": "^7.2",
@@ -61,5 +61,19 @@
         }
     },
     "minimum-stability": "dev",
-    "prefer-stable": true
+    "prefer-stable": true,
+    "keywords": [
+        "framework",
+        "laravel",
+        "php",
+        "REST API",
+        "Laravel API",
+        "Laravel backend",
+        "API starter kit",
+        "API Boilerplate",
+        "Laravel API Boilerplate",
+        "Laravel Sanctum",
+        "Laravel REST API",
+        "Pandora"
+    ]
 }
