@@ -7,6 +7,8 @@
 
 **Pandora** is a modern, customized, feature-rich API starter kit to kickstart your next _REST_ API backend.
 
+⚠️ The status of this project is **WIP**.
+
 ## Features
 
 -   Dockerized
