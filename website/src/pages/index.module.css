@@ -28,6 +28,20 @@
   width: 80px;
 }
 
+.heroKeywords {
+  color: var(--ifm-color-primary-darkest);
+}
+
+[data-theme='dark'] .heroKeywords {
+  color: var(--ifm-color-primary-lightest);
+}
+
+@media (max-width: 996px) {
+  .heroSubTitleKeywords {
+    font-size: 20px;
+  }
+}
+
 @keyframes jackInTheBox {
   from {
     opacity: 0;

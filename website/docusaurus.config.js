@@ -34,7 +34,9 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          editUrl: 'https://github.com/arifszn/pandora/tree/main/website',
+          editUrl: 'https://github.com/arifszn/pandora/edit/main/website',
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
         blog: false,
         sitemap: {

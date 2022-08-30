@@ -20,8 +20,12 @@ function HomepageHeader() {
             src={useBaseUrl('img/logo.svg')}
           />
         </div>
-        <h1 className="hero__title">{siteConfig.title}</h1>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <h1 className="hero__title">
+          <span className={styles.heroKeywords}>{siteConfig.title}</span>
+        </h1>
+        <p className={`hero__subtitle ${styles.heroSubTitleKeywords}`}>
+          {siteConfig.tagline}
+        </p>
         <div className={styles.buttons}>
           <Link
             className="button button--primary button--lg fadeIn"
