@@ -78,7 +78,7 @@ git clone https://github.com/arifszn/pandora.git
 cd pandora
 ```
 
-Then follow the process using either **Docker** or **without Docker**.
+Then follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)**.
 
 ### With Docker (Sail)
 
