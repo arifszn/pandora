@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/palenight');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Pandora',
-  tagline: 'REST API starter kit built with Laravel, OpenAPI, Sanctum.',
+  tagline: 'REST API starter kit powered by Laravel, OpenAPI, Sanctum.',
   url: 'https://arifszn.github.io',
   baseUrl: '/pandora/',
   onBrokenLinks: 'throw',
@@ -79,7 +79,7 @@ const config = {
       metadata: [
         {
           name: 'Pandora',
-          content: 'REST API starter kit built with Laravel, OpenAPI, Sanctum.',
+          content: 'REST API starter kit powered by Laravel, OpenAPI, Sanctum.',
         },
       ],
       image: 'img/logo.svg',

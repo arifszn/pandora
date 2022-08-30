@@ -1,7 +1,7 @@
 {
     "name": "arifszn/pandora",
     "type": "project",
-    "description": "REST API starter kit built with Laravel, OpenAPI, Sanctum.",
+    "description": "REST API starter kit powered by Laravel, OpenAPI, Sanctum.",
     "license": "MIT",
     "homepage": "https://github.com/arifszn/pandora",
     "require": {

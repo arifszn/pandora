@@ -2,7 +2,7 @@
 
 <p align="center">
   <h1 align="center">Pandora</h1>
-  <h4 align="center">📦 REST API starter kit built with Laravel, OpenAPI, Sanctum.</h4>
+  <h4 align="center">📦 REST API starter kit powered by Laravel, OpenAPI, Sanctum.</h4>
 
   <p align="center">
     <a href="https://github.com/arifszn/pandora/actions/workflows/test.yml">
