@@ -2,7 +2,7 @@
 
 <p align="center">
   <h1 align="center">Pandora</h1>
-  <h4 align="center">📦 REST API starter kit built with Laravel, OpenAPI, Sanctum.</h4>
+  <h4 align="center">📦 REST API starter kit powered by Laravel, OpenAPI, Sanctum.</h4>
 
   <p align="center">
     <a href="https://github.com/arifszn/pandora/actions/workflows/test.yml">
@@ -71,14 +71,7 @@
 
 -   PHP 8.1
 
-To setup Pandora, first clone the project and change the directory
-
-```shell
-git clone https://github.com/arifszn/pandora.git
-cd pandora
-```
-
-Then follow the process using either **Docker** or **without Docker**.
+To setup Pandora, follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
 
 ### With Docker (Sail)
 
