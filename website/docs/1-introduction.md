@@ -53,18 +53,8 @@ hide_title: true
 
 ## Features
 
-- Dockerized
-- REST API
-- Multi auth
-- Social Login
-- OpenAPI Specification
-- Swagger UI
-- Lint
-- PHPUnit Tests
-- Resource
-- Log viewer
-- Service Repository pattern
-- Optional Firebase Authentication
+- [Dockerized](/docs/installation#with-docker-sail)
+- [Log viewer](/docs/features/log-viewer)
 
 ## Support
 
