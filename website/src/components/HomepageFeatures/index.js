@@ -5,32 +5,40 @@ import PropTypes from 'prop-types';
 
 const FeatureList = [
   {
-    title: 'Easy to Use',
+    title: 'REST API',
     description: (
       <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
+        REST stands for Representational State Transfer. Pandora follows the
+        best REST API standards conventions.
       </>
     ),
   },
   {
-    title: 'Focus on What Matters',
+    title: 'OpenAPI Specification',
     description: (
       <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
+        Pandora comes with an easy way of writing a complete OpenAPI
+        Specification, previously known as the Swagger Specification.
       </>
     ),
   },
   {
-    title: 'Powered by React',
+    title: 'Powered by Laravel',
     description: (
       <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
+        Extend or customize your project by reusing Laravel. Pandora runs on
+        Laravel 9.
       </>
     ),
   },
+  // {
+  //   title: 'API authentication',
+  //   description: (
+  //     <>
+  //       TO DO
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({ title, description }) {
@@ -48,7 +56,7 @@ export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
       <div className="container">
-        <div className="row">
+        <div className="row justify-content-center">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

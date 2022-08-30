@@ -81,6 +81,19 @@ html[data-theme='dark'] .header-github-link:before {
   opacity: 0.6;
 }
 
+.justify-content-center {
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.root {
+  opacity: 1;
+  animation-name: fadeIn;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in;
+  animation-duration: 1s;
+}
+
 .fadeIn {
   opacity: 1;
   animation-name: fadeIn;

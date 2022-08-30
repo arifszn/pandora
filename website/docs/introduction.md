@@ -6,6 +6,9 @@ sidebar_position: 1
 
 Let's discover **Docusaurus in less than 5 minutes**.
 
+import SwaggerUI from "swagger-ui-react"
+import "swagger-ui-react/swagger-ui.css"
+
 ## Getting Started
 
 Get started by **creating a new site**.

@@ -34,8 +34,7 @@ const config = {
       ({
         docs: {
           sidebarPath: require.resolve('./sidebars.js'),
-          // Remove this to remove the "edit this page" links.
-          editUrl: 'https://github.com/arifszn/pandora/tree/main',
+          editUrl: 'https://github.com/arifszn/pandora/tree/main/website',
         },
         blog: false,
         sitemap: {
