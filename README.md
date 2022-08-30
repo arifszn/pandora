@@ -38,7 +38,7 @@
   </p>
 
   <p align="center">
-    <a href="https://arifszn.github.io/pandora">View Demo</a>
+    <a href="https://arifszn.github.io/pandora">View Docs</a>
     ·
     <a href="https://github.com/arifszn/pandora/issues">Report Bug</a>
     ·
@@ -133,6 +133,11 @@ To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/
     ```shell
     php artisan serve
     ```
+
+## Documentation
+
+Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
+
 
 ## Support
 
