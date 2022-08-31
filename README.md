@@ -53,8 +53,11 @@
 ## Features
 
 -   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
--   [Log viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
--   [Service Repository pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
+-   [OpenAPI Specification](https://arifszn.github.io/pandora/docs/features/openapi-specification)
+-   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
+-   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
+-   [Code Style & Lint](https://arifszn.github.io/pandora/docs/features/code-style-and-lint)
+-   [Log Viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
 <!-- -   REST API
 -   Multi auth
 -   Social Login
@@ -76,7 +79,14 @@ Complete documentation for Pandora can be found [here](https://arifszn.github.io
 
 -   PHP 8.1
 
-To setup Pandora, follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
+To setup Pandora, first clone the project and change the directory.
+
+```sh
+git clone https://github.com/arifszn/pandora.git
+cd pandora
+```
+
+Then follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
 
 ### With Docker (Sail)
 

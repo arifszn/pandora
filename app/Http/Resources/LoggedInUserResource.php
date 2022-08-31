@@ -6,7 +6,15 @@ use App\Models\User;
 use Illuminate\Contracts\Support\Arrayable;
 use Illuminate\Http\Resources\Json\JsonResource;
 use JsonSerializable;
+use OpenApi\Attributes as OAT;
 
+#[OAT\Schema(
+    schema: 'LoggedInUserResource',
+    properties: [
+        new OAT\Property(property: 'user', type: 'object', ref: '#/components/schemas/UserResource'),
+        new OAT\Property(property: 'token', type: 'object', ref: '#/components/schemas/AccessTokenResource'),
+    ]
+)]
 class LoggedInUserResource extends JsonResource
 {
     /**
