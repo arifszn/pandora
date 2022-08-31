@@ -9,7 +9,7 @@ title: Installation
 
 To setup Pandora, follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
 
-### With Docker (Sail)
+## With Docker (Sail)
 
 [Laravel Sail](https://github.com/laravel/sail) is a light-weight command-line interface for interacting with Laravel's default Docker development environment.
 
@@ -44,7 +44,7 @@ To setup Pandora, follow the process using either **[Docker](#with-docker-sail)*
 
 To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/sail).
 
-### Without Docker
+## Without Docker
 
 1. Copy `.env.example` to `.env`:
 

@@ -52,8 +52,10 @@
 
 ## Features
 
--   Dockerized
--   REST API
+-   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
+-   [Log viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
+-   [Service Repository pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
+<!-- -   REST API
 -   Multi auth
 -   Social Login
 -   OpenAPI Specification
@@ -61,9 +63,12 @@
 -   Lint
 -   PHPUnit Tests
 -   Resource
--   Log viewer
 -   Service Repository pattern
--   Optional Firebase Authentication
+-   Optional Firebase Authentication -->
+
+## Documentation
+
+Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
 
 ## Installation
 
@@ -133,11 +138,6 @@ To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/
     ```shell
     php artisan serve
     ```
-
-## Documentation
-
-Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
-
 
 ## Support
 
