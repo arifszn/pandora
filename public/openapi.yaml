@@ -1,0 +1,42 @@
+openapi: 3.0.0
+info:
+  title: Pandora
+  description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)"
+  license:
+    name: MIT
+    url: 'https://github.com/arifszn/pandora/blob/main/LICENSE'
+  version: 1.0.0
+servers:
+  -
+    url: 'http://localhost/api'
+    description: 'Local API server'
+components:
+  schemas:
+    UnprocessableEntityError:
+      properties:
+        message:
+          type: string
+          example: 'The given data was invalid.'
+        errors:
+          properties:
+            'key 1':
+              type: array
+              items:
+                type: string
+                example: 'Error message 1'
+            'key 2':
+              type: array
+              items:
+                type: string
+                example: 'Error message 2'
+          type: object
+      type: object
+  securitySchemes:
+    bearerAuth:
+      type: http
+      bearerFormat: JWT
+      scheme: bearer
+tags:
+  -
+    name: Auth
+    description: 'User authentication'
