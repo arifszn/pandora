@@ -8,4 +8,6 @@ You can view logs in your browser which is located in `storage/logs/` folder.
 
 Visit _`/logs`_ URL from your browser and you should be able to see the logs. **`APP_DEBUG`** environment variable must be set to true before accessing it.
 
-<img src={useBaseUrl('img/screenshots/log-viewer.png')} alt="Log Viewer" className="shadow--md"/>
+<p className="text--center">
+  <img src={useBaseUrl('img/assets/log-viewer.png')} alt="Log Viewer" className="shadow--md"/>
+</p>

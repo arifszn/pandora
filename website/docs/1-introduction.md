@@ -55,6 +55,7 @@ hide_title: true
 
 - [Dockerized](/docs/installation#with-docker-sail)
 - [Log viewer](/docs/features/log-viewer)
+- [Service Repository pattern](/docs/features/service-repository-pattern)
 
 ## Support
 

@@ -54,6 +54,7 @@
 
 -   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
 -   [Log viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
+-   [Service Repository pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
 <!-- -   REST API
 -   Multi auth
 -   Social Login
