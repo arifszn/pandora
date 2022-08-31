@@ -65,6 +65,10 @@
 -   Service Repository pattern
 -   Optional Firebase Authentication -->
 
+## Documentation
+
+Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
+
 ## Installation
 
 **Prerequisite**
@@ -133,10 +137,6 @@ To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/
     ```shell
     php artisan serve
     ```
-
-## Documentation
-
-Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
 
 ## Support
 
