@@ -31,7 +31,7 @@ class SignupRequest extends FormRequest
             'email' => [
                 'required',
                 'email',
-                'unique:App\Models\User,email'
+                'unique:App\Models\User,email',
             ],
             'password' => [
                 'required',

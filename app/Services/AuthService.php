@@ -22,8 +22,8 @@ class AuthService
     /**
      * Signup a user.
      *
-     * @param SignupRequest $request 
-     * @return User 
+     * @param  SignupRequest  $request
+     * @return User
      */
     public function signupUser(SignupRequest $request): User
     {
