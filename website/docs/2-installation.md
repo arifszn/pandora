@@ -7,7 +7,14 @@ title: Installation
 
 - PHP 8.1
 
-To setup Pandora, follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
+To setup Pandora, first clone the project and change the directory.
+
+```sh
+git clone https://github.com/arifszn/pandora.git
+cd pandora
+```
+
+Then follow the process using either **[Docker](#with-docker-sail)** or **[Without Docker](#without-docker)** and you will have a fully running Laravel installation with Sanctum, all configured.
 
 ## With Docker (Sail)
 
