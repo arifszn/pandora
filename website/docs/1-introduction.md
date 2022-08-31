@@ -54,8 +54,9 @@ hide_title: true
 ## Features
 
 - [Dockerized](/docs/installation#with-docker-sail)
-- [Log viewer](/docs/features/log-viewer)
+- [OpenAPI Specification](/docs/features/openapi-specification)
 - [Service Repository pattern](/docs/features/service-repository-pattern)
+- [Log viewer](/docs/features/log-viewer)
 
 ## Support
 

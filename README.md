@@ -53,8 +53,9 @@
 ## Features
 
 -   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
--   [Log viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
+-   [OpenAPI Specification](https://arifszn.github.io/pandora/docs/features/openapi-specification)
 -   [Service Repository pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
+-   [Log viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
 <!-- -   REST API
 -   Multi auth
 -   Social Login
