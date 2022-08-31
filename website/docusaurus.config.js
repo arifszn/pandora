@@ -96,6 +96,7 @@ const config = {
         respectPrefersColorScheme: true,
       },
       prism: {
+        additionalLanguages: ['php'],
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
