@@ -48,4 +48,4 @@ To generate the OpenAPI Specification file, run command:
 composer openapi
 ```
 
-It will generate the `openapi.yaml` file which can be viewed in the Swagger UI.
+It will generate the `openapi.yaml` file in the public folder which can be viewed in the Swagger UI.
