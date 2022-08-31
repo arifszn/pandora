@@ -39,6 +39,14 @@ const FeatureList = [
   //     </>
   //   ),
   // },
+  // {
+  //   title: 'Industry Standard and Practice',
+  //   description: (
+  //     <>
+  //       TO DO
+  //     </>
+  //   ),
+  // },
 ];
 
 function Feature({ title, description }) {
