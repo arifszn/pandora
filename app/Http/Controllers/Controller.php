@@ -12,12 +12,7 @@ use OpenApi\Attributes as OAT;
     OAT\Info(
         version: '1.0.0',
         title: 'Pandora',
-        description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)",
-        license: new OAT\License(
-            name: 'MIT',
-            identifier: 'MIT',
-            url: 'https://github.com/arifszn/pandora/blob/main/LICENSE'
-        ),
+        description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)",
     ),
     OAT\Server(url: 'http://localhost/api', description: 'Local API server'),
     OAT\SecurityScheme(
@@ -28,7 +23,7 @@ use OpenApi\Attributes as OAT;
     ),
     OAT\Tag(name: 'Auth', description: 'User authentication'),
     OAT\Schema(
-        schema: 'UnprocessableEntityError',
+        schema: 'ValidationError',
         properties: [
             new OAT\Property(property: 'message', type: 'string', example: 'The given data was invalid.'),
             new OAT\Property(

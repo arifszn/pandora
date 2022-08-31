@@ -1,18 +1,41 @@
 openapi: 3.0.0
 info:
   title: Pandora
-  description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)"
-  license:
-    name: MIT
-    url: 'https://github.com/arifszn/pandora/blob/main/LICENSE'
+  description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)"
   version: 1.0.0
 servers:
   -
     url: 'http://localhost/api'
     description: 'Local API server'
+paths:
+  /signup:
+    post:
+      tags:
+        - Auth
+      summary: 'Signup a user.'
+      operationId: AuthController.signup
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SignupRequest'
+      responses:
+        '201':
+          description: Created
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoggedInUserResource'
+        '422':
+          description: 'Unprocessable entity'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
 components:
   schemas:
-    UnprocessableEntityError:
+    ValidationError:
       properties:
         message:
           type: string
@@ -30,6 +53,63 @@ components:
                 type: string
                 example: 'Error message 2'
           type: object
+      type: object
+    SignupRequest:
+      required:
+        - name
+        - email
+        - password
+        - password_confirmation
+      properties:
+        name:
+          type: string
+          example: 'John Doe'
+        email:
+          type: string
+          format: email
+          example: john@example.com
+        password:
+          type: string
+          example: '123456'
+        password_confirmation:
+          type: string
+          example: '123456'
+      type: object
+    AccessTokenResource:
+      properties:
+        access_token:
+          type: string
+          example: 6|JeXDJdhmaQN4Nl3T3DaD9sE20PoPrdUx15W0m2eA
+        type:
+          type: string
+          example: bearer
+      type: object
+    LoggedInUserResource:
+      properties:
+        user:
+          $ref: '#/components/schemas/UserResource'
+        token:
+          $ref: '#/components/schemas/AccessTokenResource'
+      type: object
+    UserResource:
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: 'John Doe'
+        email:
+          type: string
+          example: john@example.com
+        avatar_url:
+          type: string
+          example: 'https://someplace.com/avatar'
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          example: '2022-08-27T16:14:46.000000Z'
       type: object
   securitySchemes:
     bearerAuth:
