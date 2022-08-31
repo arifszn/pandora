@@ -57,6 +57,7 @@ hide_title: true
 - [OpenAPI Specification](/docs/features/openapi-specification)
 - [Service Repository Pattern](/docs/features/service-repository-pattern)
 - [API Resource](/docs/features/api-resource)
+- [Code Style & Lint](/docs/features/code-style-and-lint)
 - [Log Viewer](/docs/features/log-viewer)
 
 ## Support

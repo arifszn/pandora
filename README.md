@@ -56,7 +56,7 @@
 -   [OpenAPI Specification](https://arifszn.github.io/pandora/docs/features/openapi-specification)
 -   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
 -   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
--   Code Style & Lint
+-   [Code Style & Lint](https://arifszn.github.io/pandora/docs/features/code-style-and-lint)
 -   [Log Viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
 <!-- -   REST API
 -   Multi auth
