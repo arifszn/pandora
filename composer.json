@@ -49,7 +49,8 @@
             "@php artisan key:generate --ansi"
         ],
         "lint": "./vendor/bin/pint",
-        "lint:test": "./vendor/bin/pint --test"
+        "lint:test": "./vendor/bin/pint --test",
+        "openapi": "./vendor/bin/openapi app -o public/openapi.yaml"
     },
     "extra": {
         "laravel": {
