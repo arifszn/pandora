@@ -7961,6 +7961,7 @@
 .swagger-ui .expand-operation svg {
   height: 20px;
   width: 20px;
+  fill: var(--ifm-color-content);
 }
 .swagger-ui .expand-methods {
   padding: 0 10px;
@@ -8476,7 +8477,7 @@
   opacity: 0.5;
 }
 .swagger-ui .model-title {
-  color: #505050;
+  color: var(--ifm-color-content-secondary);
   font-family: sans-serif;
   font-size: 16px;
 }

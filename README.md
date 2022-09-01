@@ -54,8 +54,8 @@
 
 -   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
 -   [OpenAPI Specification](https://arifszn.github.io/pandora/docs/features/openapi-specification)
--   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 -   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
+-   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 -   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
 -   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
 -   [Code Style & Lint](https://arifszn.github.io/pandora/docs/features/code-style-and-lint)

@@ -16,14 +16,14 @@ if (Config::get('pandora.api_doc.display_swagger_ui')) {
     });
 }
 
-if (Config::get('pandora.api_doc.display_swagger_ui')) {
-    Route::get('/swagger-ui', function () {
-        return view('openapi-spec.swagger');
-    });
-}
-
 if (Config::get('pandora.api_doc.display_redoc')) {
     Route::get('/redoc', function () {
         return view('openapi-spec.redoc');
+    });
+}
+
+if (Config::get('pandora.api_doc.display_swagger_ui')) {
+    Route::get('/swagger-ui', function () {
+        return view('openapi-spec.swagger');
     });
 }
