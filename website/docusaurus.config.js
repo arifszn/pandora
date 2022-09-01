@@ -48,6 +48,21 @@ const config = {
         },
       }),
     ],
+    [
+      'redocusaurus',
+      {
+        specs: [
+          {
+            id: 'redoc-nested',
+            spec: 'https://raw.githubusercontent.com/arifszn/pandora/main/public/openapi.yaml',
+          },
+        ],
+        theme: {
+          primaryColor: '#6f32be',
+          primaryColorDark: '#8c65bd',
+        },
+      },
+    ],
   ],
 
   themeConfig:
