@@ -55,8 +55,8 @@ hide_title: true
 
 - [Dockerized](/docs/installation#with-docker-sail)
 - [OpenAPI Specification](/docs/features/openapi-specification)
-- [Swagger UI](/api-documentation/swagger-ui)
-- [Redoc](/api-documentation/redoc)
+- [Swagger UI](/docs/api-documentation/swagger-ui)
+- [Redoc](/docs/api-documentation/redoc)
 - [Service Repository Pattern](/docs/features/service-repository-pattern)
 - [API Resource](/docs/features/api-resource)
 - [Code Style & Lint](/docs/features/code-style-and-lint)
