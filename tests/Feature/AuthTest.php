@@ -3,6 +3,7 @@
 namespace Tests\Feature;
 
 use App\Http\Resources\LoggedInUserResource;
+use App\Models\User;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\Response;
 use Tests\TestCase;
@@ -75,5 +76,55 @@ class AuthTest extends TestCase
             ]);
 
         $this->assertInstanceOf(LoggedInUserResource::class, $response->getOriginalContent());
+    }
+
+    /**
+     * A user can not signup without required input.
+     *
+     * @return void
+     */
+    public function testAUserCanNotSignupWithoutRequiredInput()
+    {
+        $this
+            ->json(
+                'POST',
+                $this->routes['signup'],
+                []
+            )
+            ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
+            ->assertJsonValidationErrorFor('name')
+            ->assertJsonValidationErrorFor('email')
+            ->assertJsonValidationErrorFor('password');
+    }
+
+    /**
+     * A user can not signup with conflicting email.
+     *
+     * @return void
+     */
+    public function testAUserCanNotSignupWithConflictingEmail()
+    {
+        $user =  User::factory()->create();
+
+        $this
+            ->json(
+                'POST',
+                $this->routes['signup'],
+                [
+                    'email' => $user->email,
+                    'name' => $user->name,
+                    'password' => '123456',
+                    'password_password' => '123456',
+                ]
+            )
+            ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
+            ->assertJsonValidationErrorFor('email')
+            ->assertJson([
+                'errors' => [
+                    'email' => [
+                        'The email has already been taken.'
+                    ]
+                ],
+            ]);
     }
 }
