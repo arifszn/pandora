@@ -2,6 +2,8 @@
 title: CI/CD
 ---
 
+import useBaseUrl from '@docusaurus/useBaseUrl';
+
 Continuous integration (CI) and continuous delivery (CD), also known as CI/CD, embodies a culture, operating principles, and a set of practices that application development teams use to deliver code changes more frequently and reliably.
 
 Pandora uses **[GitHub Actions](https://docs.github.com/en/actions)** for validating and testing Pull Request.
@@ -10,7 +12,15 @@ Here's an overview of the used workflow so that any newcomer can be familiar wit
 
 # Workflow File
 
-The workflow file is situated in the `.github/workflows/test.yml` file. Whenever a pull request is created, the workflow runs the pipeline to validate the pull request running Lint test, PHPUnit test.
+The workflow file is situated in the `.github/workflows/test.yml` file. Whenever a pull request is created, the workflow runs the pipeline to validate the pull request running Lint test, PHPUnit test. You can extend or modify it according to your need.
+
+The test result can be viewed in the pull request or in the [`Actions`](https://github.com/arifszn/pandora/actions) tab.
+
+<p className="text--center">
+  <img src={useBaseUrl('img/assets/github-actions.png')} alt="Github Actions" className="shadow--md"/>
+</p>
+
+**test.yml**
 
 ```yml
 name: 'Test'
