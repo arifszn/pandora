@@ -117,4 +117,3 @@ If you are used to developing in Postman, you can use the OpenAPI specification 
     <p className="text--center">
         <img src={useBaseUrl('img/assets/postman-import-final-step.png')} alt="Postman Import Final Step" className="shadow--md"/>
     </p>
-

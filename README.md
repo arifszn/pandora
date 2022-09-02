@@ -59,6 +59,7 @@
 -   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
 -   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
 -   [Code Style & Lint](https://arifszn.github.io/pandora/docs/features/code-style-and-lint)
+-   [CI/CD](https://arifszn.github.io/pandora/docs/features/ci-cd)
 -   [Log Viewer](https://arifszn.github.io/pandora/docs/features/log-viewer)
 <!-- -   REST API
 -   Multi auth
@@ -74,6 +75,14 @@
 ## Documentation
 
 Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
+
+**The API documentation:**
+
+-   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
+-   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
+
+![Redoc](https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png)
+![Swagger UI](https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/swagger-ui.png)
 
 ## Installation
 

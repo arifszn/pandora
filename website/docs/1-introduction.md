@@ -60,6 +60,7 @@ hide_title: true
 - [Service Repository Pattern](/docs/features/service-repository-pattern)
 - [API Resource](/docs/features/api-resource)
 - [Code Style & Lint](/docs/features/code-style-and-lint)
+- [CI/CD](/docs/features/ci-cd)
 - [Log Viewer](/docs/features/log-viewer)
 
 ## Support
