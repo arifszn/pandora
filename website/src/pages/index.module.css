@@ -29,11 +29,11 @@
 }
 
 .heroKeywords {
-  color: var(--ifm-color-primary-darkest);
+  color: var(--ifm-color-primary-lighter);
 }
 
 [data-theme='dark'] .heroKeywords {
-  color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-darker);
 }
 
 @media (max-width: 996px) {
