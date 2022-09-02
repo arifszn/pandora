@@ -58,8 +58,8 @@ const config = {
           },
         ],
         theme: {
-          primaryColor: '#6f32be',
-          primaryColorDark: '#8c65bd',
+          primaryColor: '#5d0fd2',
+          primaryColorDark: '#b894d6',
         },
       },
     ],
@@ -108,7 +108,7 @@ const config = {
       colorMode: {
         defaultMode: 'light',
         disableSwitch: false,
-        respectPrefersColorScheme: true,
+        respectPrefersColorScheme: false,
       },
       prism: {
         additionalLanguages: ['php', 'yaml'],
