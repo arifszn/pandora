@@ -49,7 +49,7 @@ Then follow the process using either **[Docker](#with-docker-sail)** or **[Witho
    ./vendor/bin/sail artisan key:generate
    ```
 
-To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/sail).
+To learn more about Sail, visit the **[Laravel website](https://laravel.com/docs/9.x/sail)**.
 
 ## Without Docker
 
