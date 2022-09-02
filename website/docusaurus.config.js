@@ -59,7 +59,7 @@ const config = {
         ],
         theme: {
           primaryColor: '#5d0fd2',
-          primaryColorDark: '#b894d6',
+          primaryColorDark: '#a472ee',
         },
       },
     ],
