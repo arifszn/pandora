@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\UserSignedUp;
+use App\Http\Requests\Auth\LoginRequest;
 use App\Http\Requests\Auth\SignupRequest;
 use App\Http\Resources\LoggedInUserResource;
 use App\Services\AuthService;
@@ -54,6 +56,8 @@ class AuthController extends Controller
     public function signup(SignupRequest $request): JsonResponse
     {
         $user = $this->authService->signupUser($request);
+
+        UserSignedUp::dispatch($user);
 
         return Response::json(new LoggedInUserResource($user), HttpResponse::HTTP_CREATED);
     }
