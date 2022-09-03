@@ -28,4 +28,15 @@ class UserService
     {
         return $this->userRepository->create($data);
     }
+
+    /**
+     * Get a user by email.
+     *
+     * @param  string  $email
+     * @return null|User
+     */
+    public function getByEmail(string $email): ?User
+    {
+        return $this->userRepository->get(['email' => $email]);
+    }
 }
