@@ -1,17 +1,17 @@
 openapi: 3.0.0
 info:
   title: Pandora
-  description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)"
+  description: "## Introduction\n\n API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)"
   version: 1.0.0
 servers:
   -
-    url: 'http://localhost/api'
+    url: 'http://localhost'
     description: 'Local API server'
 paths:
-  /signup:
+  /api/signup:
     post:
       tags:
-        - Auth
+        - auth
       summary: 'Signup a user.'
       operationId: AuthController.signup
       requestBody:
@@ -33,10 +33,10 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationError'
-  /login:
+  /api/login:
     post:
       tags:
-        - Auth
+        - auth
       summary: 'Login a user.'
       operationId: AuthController.login
       requestBody:
@@ -164,5 +164,5 @@ components:
       scheme: bearer
 tags:
   -
-    name: Auth
+    name: auth
     description: 'User authentication'
