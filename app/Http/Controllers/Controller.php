@@ -12,16 +12,16 @@ use OpenApi\Attributes as OAT;
     OAT\Info(
         version: '1.0.0',
         title: 'Pandora',
-        description: "API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)",
+        description: "## Introduction\n\n API documentation for Pandora - REST API starter kit powered by Laravel, OpenAPI, Sanctum.\n\n- [GitHub](https://github.com/arifszn/pandora)\n- [MIT License](https://github.com/arifszn/pandora/blob/main/LICENSE)",
     ),
-    OAT\Server(url: 'http://localhost/api', description: 'Local API server'),
+    OAT\Server(url: 'http://localhost', description: 'Local API server'),
     OAT\SecurityScheme(
         securityScheme: 'bearerAuth',
         scheme: 'bearer',
         bearerFormat: 'JWT',
         type: 'http'
     ),
-    OAT\Tag(name: 'Auth', description: 'User authentication'),
+    OAT\Tag(name: 'auth', description: 'User authentication'),
     OAT\Schema(
         schema: 'ValidationError',
         properties: [

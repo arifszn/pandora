@@ -34,8 +34,8 @@ class AuthController extends Controller
      * @return JsonResponse
      */
     #[OAT\Post(
-        tags: ['Auth'],
-        path: '/signup',
+        tags: ['auth'],
+        path: '/api/signup',
         operationId: 'AuthController.signup',
         requestBody: new OAT\RequestBody(
             required: true,
@@ -74,8 +74,8 @@ class AuthController extends Controller
      * @throws NotFoundHttpException
      */
     #[OAT\Post(
-        tags: ['Auth'],
-        path: '/login',
+        tags: ['auth'],
+        path: '/api/login',
         operationId: 'AuthController.login',
         requestBody: new OAT\RequestBody(
             required: true,
