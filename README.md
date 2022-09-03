@@ -138,6 +138,12 @@ Then follow the process using either **[Docker](#with-docker-sail)** or **[Witho
     ./vendor/bin/sail artisan key:generate
     ```
 
+5. Run database migration with seeder:
+
+    ```shell
+    ./vendor/bin/sail artisan migrate --seed
+    ```
+
 To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/sail).
 
 ### Without Docker
@@ -160,7 +166,13 @@ To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/
     php artisan key:generate
     ```
 
-4. Start the local server:
+4. Run database migration with seeder:
+
+    ```shell
+    php artisan migrate --seed
+    ```
+
+5. Start the local server:
 
     ```shell
     php artisan serve
