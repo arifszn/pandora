@@ -112,7 +112,7 @@ If you are used to developing in Postman, you can use the OpenAPI specification 
         <img src={useBaseUrl('img/assets/postman-import-link.png')} alt="Postman Import Link" className="shadow--md"/>
     </p>
 
-- As a final step, select **Import**.
+- For the final step, select **Import**.
 
     <p className="text--center">
         <img src={useBaseUrl('img/assets/postman-import-final-step.png')} alt="Postman Import Final Step" className="shadow--md"/>
