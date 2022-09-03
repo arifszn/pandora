@@ -87,7 +87,7 @@ Complete documentation for Pandora can be found [here](https://arifszn.github.io
 
 <p>
   <a href="https://arifszn.github.io/pandora">
-    <img src="https://user-images.githubusercontent.com/45073703/188282969-6840afb2-83a3-41c1-92ad-f6ecb23e6a4d.png" alt="Documentation" width="70%"/>
+    <img src="https://user-images.githubusercontent.com/45073703/188283209-2ecb6fcb-b6e4-4e96-9ad4-168535ba10ce.png" alt="Documentation" width="70%"/>
   </a>
   <br/>
 </p>
