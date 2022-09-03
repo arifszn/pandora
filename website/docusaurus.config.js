@@ -115,6 +115,11 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      docs: {
+        sidebar: {
+          hideable: true,
+        },
+      },
     }),
   plugins: [
     [
