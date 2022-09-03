@@ -46,6 +46,14 @@
   </p>
 </p>
 
+<p align="center">
+  <a href="https://arifszn.github.io/gitprofile">
+    <img src="https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png" alt="Preview" width="60%"/>
+  </a>
+  <br/>
+  <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
+</p>
+
 **Pandora** is a modern, customized, feature-rich API starter kit to kickstart your next _REST_ API backend.
 
 ⚠️ The status of this project is **WIP**.
@@ -57,6 +65,7 @@
 -   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
 -   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 -   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
+-   [Testing](https://arifszn.github.io/pandora/docs/features/testing)
 -   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
 -   [Code Style & Lint](https://arifszn.github.io/pandora/docs/features/code-style-and-lint)
 -   [CI/CD](https://arifszn.github.io/pandora/docs/features/ci-cd)
@@ -80,9 +89,6 @@ Complete documentation for Pandora can be found [here](https://arifszn.github.io
 
 -   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
 -   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
-
-![Redoc](https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png)
-![Swagger UI](https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/swagger-ui.png)
 
 ## Installation
 

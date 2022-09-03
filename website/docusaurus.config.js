@@ -58,8 +58,8 @@ const config = {
           },
         ],
         theme: {
-          primaryColor: '#5d0fd2',
-          primaryColorDark: '#b894d6',
+          primaryColor: '#5867dd',
+          primaryColorDark: '#5867dd',
         },
       },
     ],

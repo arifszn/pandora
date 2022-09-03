@@ -58,6 +58,7 @@ hide_title: true
 - [Redoc](/docs/api-documentation/redoc)
 - [Swagger UI](/docs/api-documentation/swagger-ui)
 - [Service Repository Pattern](/docs/features/service-repository-pattern)
+- [Testing](/docs/features/testing)
 - [API Resource](/docs/features/api-resource)
 - [Code Style & Lint](/docs/features/code-style-and-lint)
 - [CI/CD](/docs/features/ci-cd)
