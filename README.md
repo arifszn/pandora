@@ -47,7 +47,7 @@
 </p>
 
 <p align="center">
-  <a href="https://arifszn.github.io/gitprofile">
+  <a href="https://arifszn.github.io/pandora">
     <img src="https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png" alt="Preview" width="60%"/>
   </a>
   <br/>
