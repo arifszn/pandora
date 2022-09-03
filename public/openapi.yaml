@@ -33,6 +33,39 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/ValidationError'
+  /login:
+    post:
+      tags:
+        - Auth
+      summary: 'Login a user.'
+      operationId: AuthController.login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/LoginRequest'
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoggedInUserResource'
+        '422':
+          description: 'Unprocessable entity'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                properties:
+                  message: { type: string, example: 'Invalid credentials.' }
+                type: object
 components:
   schemas:
     ValidationError:
@@ -53,6 +86,19 @@ components:
                 type: string
                 example: 'Error message 2'
           type: object
+      type: object
+    LoginRequest:
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          example: john@example.com
+        password:
+          type: string
+          example: '123456'
       type: object
     SignupRequest:
       required:
