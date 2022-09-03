@@ -104,7 +104,7 @@ class AuthTest extends TestCase
      */
     public function testAUserCanNotSignupWithConflictingEmail()
     {
-        $user =  User::factory()->create();
+        $user = User::factory()->create();
 
         $this
             ->json(
@@ -122,8 +122,8 @@ class AuthTest extends TestCase
             ->assertJson([
                 'errors' => [
                     'email' => [
-                        'The email has already been taken.'
-                    ]
+                        'The email has already been taken.',
+                    ],
                 ],
             ]);
     }
