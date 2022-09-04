@@ -8,6 +8,7 @@ use App\Http\Requests\Auth\SignupRequest;
 use App\Http\Resources\LoggedInUserResource;
 use App\Services\AuthService;
 use Illuminate\Http\JsonResponse;
+use Illuminate\Http\Request;
 use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Support\Facades\Response;
 use OpenApi\Attributes as OAT;
@@ -113,5 +114,42 @@ class AuthController extends Controller
         $user = $this->authService->loginUser($request);
 
         return Response::json(new LoggedInUserResource($user));
+    }
+
+    /**
+     * Logout a user.
+     * 
+     * @param Request $request 
+     * @return HttpResponse 
+     */
+    #[OAT\Post(
+        tags: ['auth'],
+        path: '/api/logout',
+        operationId: 'AuthController.logout',
+        responses: [
+            new OAT\Response(
+                response: HttpResponse::HTTP_NO_CONTENT,
+                description: 'No content'
+            ),
+            new OAT\Response(
+                response: HttpResponse::HTTP_UNAUTHORIZED,
+                description: 'Unauthorized',
+                content: new OAT\JsonContent(
+                    properties: [
+                        new OAT\Property(
+                            property: 'message',
+                            type: 'string',
+                            example: 'Unauthenticated.'
+                        ),
+                    ]
+                )
+            ),
+        ]
+    )]
+    public function logout(Request $request)
+    {
+        $this->authService->logoutUser($request->user());
+
+        return Response::noContent();
     }
 }

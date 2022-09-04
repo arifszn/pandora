@@ -58,4 +58,15 @@ class AuthService
 
         return $user;
     }
+
+    /**
+     * Logout a user.
+     * 
+     * @param User $user 
+     * @return bool 
+     */
+    public function logoutUser(User $user): bool
+    {
+        return $user->currentAccessToken()->delete();
+    }
 }
