@@ -66,6 +66,23 @@ paths:
                 properties:
                   message: { type: string, example: 'Invalid credentials.' }
                 type: object
+  /api/logout:
+    post:
+      tags:
+        - auth
+      summary: 'Logout a user.'
+      operationId: AuthController.logout
+      responses:
+        '204':
+          description: 'No content'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                properties:
+                  message: { type: string, example: Unauthenticated. }
+                type: object
 components:
   schemas:
     ValidationError:
