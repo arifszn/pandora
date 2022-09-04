@@ -118,9 +118,9 @@ class AuthController extends Controller
 
     /**
      * Logout a user.
-     * 
-     * @param Request $request 
-     * @return HttpResponse 
+     *
+     * @param  Request  $request
+     * @return HttpResponse
      */
     #[OAT\Post(
         tags: ['auth'],

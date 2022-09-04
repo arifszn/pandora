@@ -61,9 +61,9 @@ class AuthService
 
     /**
      * Logout a user.
-     * 
-     * @param User $user 
-     * @return bool 
+     *
+     * @param  User  $user
+     * @return bool
      */
     public function logoutUser(User $user): bool
     {

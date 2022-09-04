@@ -13,9 +13,9 @@ class UserSignedUp
 
     /**
      * Create a new event instance.
-     * 
-     * @param Authenticatable $user 
-     * @return void 
+     *
+     * @param  Authenticatable  $user
+     * @return void
      */
     public function __construct(public Authenticatable $user)
     {
