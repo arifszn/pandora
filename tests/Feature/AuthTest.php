@@ -9,6 +9,7 @@ use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\Response;
 use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Hash;
+use Laravel\Sanctum\Sanctum;
 use Tests\TestCase;
 
 class AuthTest extends TestCase
@@ -32,6 +33,7 @@ class AuthTest extends TestCase
         $this->routes = [
             'signup' => '/api/signup',
             'login' => '/api/login',
+            'logout' => '/api/logout',
         ];
     }
 
@@ -202,5 +204,18 @@ class AuthTest extends TestCase
             ->assertJson([
                 'message' => 'Invalid credentials.',
             ]);
+    }
+
+    /**
+     * A user can logout successfully.
+     *
+     * @return void
+     */
+    public function testAUserCanLogoutSuccessfully()
+    {
+        Sanctum::actingAs(User::factory()->create());
+
+        $this->json('POST', $this->routes['logout'])
+            ->assertStatus(Response::HTTP_NO_CONTENT);
     }
 }
