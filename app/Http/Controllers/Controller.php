@@ -16,7 +16,7 @@ use OpenApi\Attributes as OAT;
     ),
     OAT\Server(url: 'http://localhost', description: 'Local API server'),
     OAT\SecurityScheme(
-        securityScheme: 'bearerAuth',
+        securityScheme: 'BearerToken',
         scheme: 'bearer',
         bearerFormat: 'JWT',
         type: 'http'

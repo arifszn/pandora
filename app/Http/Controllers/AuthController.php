@@ -126,6 +126,7 @@ class AuthController extends Controller
         tags: ['auth'],
         path: '/api/logout',
         operationId: 'AuthController.logout',
+        security: [['BearerToken' => []]],
         responses: [
             new OAT\Response(
                 response: HttpResponse::HTTP_NO_CONTENT,

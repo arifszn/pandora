@@ -83,6 +83,9 @@ paths:
                 properties:
                   message: { type: string, example: Unauthenticated. }
                 type: object
+      security:
+        -
+          BearerToken: []
 components:
   schemas:
     ValidationError:
@@ -175,7 +178,7 @@ components:
           example: '2022-08-27T16:14:46.000000Z'
       type: object
   securitySchemes:
-    bearerAuth:
+    BearerToken:
       type: http
       bearerFormat: JWT
       scheme: bearer
