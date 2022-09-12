@@ -131,20 +131,7 @@ class AuthController extends Controller
             new OAT\Response(
                 response: HttpResponse::HTTP_NO_CONTENT,
                 description: 'No content'
-            ),
-            new OAT\Response(
-                response: HttpResponse::HTTP_UNAUTHORIZED,
-                description: 'Unauthorized',
-                content: new OAT\JsonContent(
-                    properties: [
-                        new OAT\Property(
-                            property: 'message',
-                            type: 'string',
-                            example: 'Unauthenticated.'
-                        ),
-                    ]
-                )
-            ),
+            )
         ]
     )]
     public function logout(Request $request)
