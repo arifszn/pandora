@@ -136,7 +136,7 @@ Then follow the process using either **[Docker](#with-docker-sail)** or **[Witho
 3. Run the containers:
 
     ```shell
-    ./vendor/bin/sail up
+    ./vendor/bin/sail up -d
     ```
 
 4. Generate application key:
