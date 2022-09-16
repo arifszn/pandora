@@ -92,4 +92,15 @@ class AuthService
 
         return $admin;
     }
+
+    /**
+     * Logout an admin.
+     *
+     * @param  Admin  $admin
+     * @return bool
+     */
+    public function logoutAdmin(Admin $admin): bool
+    {
+        return $admin->currentAccessToken()->delete();
+    }
 }
