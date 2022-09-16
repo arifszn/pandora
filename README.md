@@ -71,7 +71,7 @@
 
 ## Functionalities
 
--   [Multi auth](https://arifszn.github.io/pandora/docs/functionalities/authentication)
+-   [Multi Auth](https://arifszn.github.io/pandora/docs/functionalities/authentication)
 
 <!-- -   REST API
 -   Multi auth

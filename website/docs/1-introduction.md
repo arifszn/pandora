@@ -64,7 +64,7 @@ hide_title: true
 
 ## Functionalities
 
-- [Multi auth](/docs/functionalities/authentication)
+- [Multi Auth](/docs/functionalities/authentication)
 
 ## Support
 
