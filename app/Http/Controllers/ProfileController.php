@@ -2,14 +2,13 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use App\Http\Resources\UserResource;
 use App\Services\UserService;
 use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Support\Facades\Response;
 use OpenApi\Attributes as OAT;
-use Illuminate\Http\Response as HttpResponse;
 
 class ProfileController extends Controller
 {
@@ -26,9 +25,9 @@ class ProfileController extends Controller
 
     /**
      * Get the authenticated user.
-     * 
-     * @param Request $request 
-     * @return JsonResponse 
+     *
+     * @param  Request  $request
+     * @return JsonResponse
      */
     #[OAT\Get(
         tags: ['profile'],
