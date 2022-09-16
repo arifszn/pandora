@@ -49,8 +49,6 @@ hide_title: true
 
 **Pandora** is a modern, customized, feature-rich API starter kit to kickstart your next _REST_ API backend.
 
-⚠️ The status of this project is **WIP**.
-
 ## Features
 
 - [Dockerized](/docs/installation#with-docker-sail)
@@ -63,6 +61,10 @@ hide_title: true
 - [Code Style & Lint](/docs/features/code-style-and-lint)
 - [CI/CD](/docs/features/ci-cd)
 - [Log Viewer](/docs/features/log-viewer)
+
+## Functionalities
+
+- [Multi Auth](/docs/functionalities/authentication)
 
 ## Support
 
