@@ -12,7 +12,8 @@ paths:
     post:
       tags:
         - auth
-      summary: 'Signup a user.'
+      summary: 'Signup a user'
+      description: 'Signup a user.'
       operationId: AuthController.signup
       requestBody:
         required: true
@@ -37,7 +38,8 @@ paths:
     post:
       tags:
         - auth
-      summary: 'Login a user.'
+      summary: 'Login a user'
+      description: 'Login a user.'
       operationId: AuthController.login
       requestBody:
         required: true
@@ -70,7 +72,8 @@ paths:
     post:
       tags:
         - auth
-      summary: 'Logout a user.'
+      summary: 'Logout a user'
+      description: 'Logout a user.'
       operationId: AuthController.logout
       responses:
         '204':
@@ -82,7 +85,8 @@ paths:
     post:
       tags:
         - adminAuth
-      summary: 'Login an admin.'
+      summary: 'Login an admin'
+      description: 'Login an admin.'
       operationId: AuthController.adminLogin
       requestBody:
         required: true
@@ -115,7 +119,8 @@ paths:
     post:
       tags:
         - adminAuth
-      summary: 'Logout an admin.'
+      summary: 'Logout an admin'
+      description: 'Logout an admin.'
       operationId: AuthController.adminLogout
       responses:
         '204':

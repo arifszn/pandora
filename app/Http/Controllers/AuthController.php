@@ -39,6 +39,7 @@ class AuthController extends Controller
     #[OAT\Post(
         tags: ['auth'],
         path: '/api/signup',
+        summary: 'Signup a user',
         operationId: 'AuthController.signup',
         requestBody: new OAT\RequestBody(
             required: true,
@@ -79,6 +80,7 @@ class AuthController extends Controller
     #[OAT\Post(
         tags: ['auth'],
         path: '/api/login',
+        summary: 'Login a user',
         operationId: 'AuthController.login',
         requestBody: new OAT\RequestBody(
             required: true,
@@ -127,6 +129,7 @@ class AuthController extends Controller
     #[OAT\Post(
         tags: ['auth'],
         path: '/api/logout',
+        summary: 'Logout a user',
         operationId: 'AuthController.logout',
         security: [['BearerToken' => []]],
         responses: [
@@ -155,6 +158,7 @@ class AuthController extends Controller
     #[OAT\Post(
         tags: ['adminAuth'],
         path: '/api/admin/login',
+        summary: 'Login an admin',
         operationId: 'AuthController.adminLogin',
         requestBody: new OAT\RequestBody(
             required: true,
@@ -203,6 +207,7 @@ class AuthController extends Controller
     #[OAT\Post(
         tags: ['adminAuth'],
         path: '/api/admin/logout',
+        summary: 'Logout an admin',
         operationId: 'AuthController.adminLogout',
         security: [['BearerToken' => []]],
         responses: [
