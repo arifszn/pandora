@@ -14,5 +14,7 @@ with a fix.
 
 ## Submitting a Pull Request
 
+[Fork](https://github.com/arifszn/pandora/fork) the repo, push your changes on your forked repo and finally submit a Pull Request in [here](https://github.com/arifszn/pandora/pulls).
+
 -   If applicable, update the `readme`.
 -   Use `composer lint` before pushing.
