@@ -35,7 +35,7 @@ class RouteServiceProvider extends ServiceProvider
                     require base_path('routes/api/auth.php');
 
                     Route::group([
-                        'middleware' => ['auth:user']
+                        'middleware' => ['auth:user'],
                     ], function () {
                         require base_path('routes/api/profile.php');
                     });
