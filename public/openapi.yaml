@@ -81,7 +81,7 @@ paths:
   /api/admin/login:
     post:
       tags:
-        - auth
+        - adminAuth
       summary: 'Login an admin.'
       operationId: AuthController.adminLogin
       requestBody:
@@ -251,3 +251,6 @@ tags:
   -
     name: auth
     description: 'User authentication'
+  -
+    name: adminAuth
+    description: 'Admin authentication'
