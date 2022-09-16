@@ -195,10 +195,10 @@ components:
           example: 1
         name:
           type: string
-          example: 'John Doe'
+          example: Admin
         email:
           type: string
-          example: john@example.com
+          example: root@admin.com
         avatar_url:
           type: string
           example: 'https://someplace.com/avatar'
