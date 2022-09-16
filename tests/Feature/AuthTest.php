@@ -37,6 +37,7 @@ class AuthTest extends TestCase
             'login' => '/api/login',
             'logout' => '/api/logout',
             'adminLogin' => '/api/admin/login',
+            'adminLogout' => '/api/admin/logout',
         ];
     }
 
@@ -216,7 +217,7 @@ class AuthTest extends TestCase
      */
     public function testAUserCanLogoutSuccessfully()
     {
-        Sanctum::actingAs(User::factory()->create());
+        Sanctum::actingAs(User::factory()->create(), [], 'user');
 
         $this->json('POST', $this->routes['logout'])
             ->assertStatus(Response::HTTP_NO_CONTENT);
@@ -299,5 +300,18 @@ class AuthTest extends TestCase
             ->assertJson([
                 'message' => 'Invalid credentials.',
             ]);
+    }
+
+    /**
+     * An admin can logout successfully.
+     *
+     * @return void
+     */
+    public function testAnAdminCanLogoutSuccessfully()
+    {
+        Sanctum::actingAs(Admin::factory()->create(), [], 'admin');
+
+        $this->json('POST', $this->routes['adminLogout'])
+            ->assertStatus(Response::HTTP_NO_CONTENT);
     }
 }

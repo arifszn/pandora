@@ -111,6 +111,18 @@ paths:
                 properties:
                   message: { type: string, example: 'Invalid credentials.' }
                 type: object
+  /api/admin/logout:
+    post:
+      tags:
+        - adminAuth
+      summary: 'Logout an admin.'
+      operationId: AuthController.adminLogout
+      responses:
+        '204':
+          description: 'No content'
+      security:
+        -
+          BearerToken: []
 components:
   schemas:
     ValidationError:

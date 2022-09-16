@@ -193,4 +193,29 @@ class AuthController extends Controller
 
         return Response::json(new LoggedInAdminResource($admin));
     }
+
+    /**
+     * Logout an admin.
+     *
+     * @param  Request  $request
+     * @return JsonResponse
+     */
+    #[OAT\Post(
+        tags: ['adminAuth'],
+        path: '/api/admin/logout',
+        operationId: 'AuthController.adminLogout',
+        security: [['BearerToken' => []]],
+        responses: [
+            new OAT\Response(
+                response: HttpResponse::HTTP_NO_CONTENT,
+                description: 'No content'
+            ),
+        ]
+    )]
+    public function adminLogout(Request $request): JsonResponse
+    {
+        $this->authService->logoutAdmin($request->user());
+
+        return Response::json(null, HttpResponse::HTTP_NO_CONTENT);
+    }
 }
