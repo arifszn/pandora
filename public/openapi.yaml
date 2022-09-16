@@ -128,6 +128,23 @@ paths:
       security:
         -
           BearerToken: []
+  /api/profile:
+    get:
+      tags:
+        - profile
+      summary: me
+      description: 'Get the authenticated user.'
+      operationId: ProfileController.me
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResource'
+      security:
+        -
+          BearerToken: []
 components:
   schemas:
     ValidationError:
@@ -271,3 +288,6 @@ tags:
   -
     name: adminAuth
     description: 'Admin authentication'
+  -
+    name: profile
+    description: 'User profile'
