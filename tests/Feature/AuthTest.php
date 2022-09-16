@@ -3,7 +3,9 @@
 namespace Tests\Feature;
 
 use App\Events\UserSignedUp;
+use App\Http\Resources\LoggedInAdminResource;
 use App\Http\Resources\LoggedInUserResource;
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Foundation\Testing\WithFaker;
 use Illuminate\Http\Response;
@@ -34,6 +36,7 @@ class AuthTest extends TestCase
             'signup' => '/api/signup',
             'login' => '/api/login',
             'logout' => '/api/logout',
+            'adminLogin' => '/api/admin/login',
         ];
     }
 
@@ -217,5 +220,84 @@ class AuthTest extends TestCase
 
         $this->json('POST', $this->routes['logout'])
             ->assertStatus(Response::HTTP_NO_CONTENT);
+    }
+
+    /**
+     * An admin can login successfully.
+     *
+     * @return void
+     */
+    public function testAnAdminCanLoginSuccessfully()
+    {
+        $admin = Admin::factory(['password' => Hash::make('123456')])->create();
+
+        $request = [
+            'email' => $admin->email,
+            'password' => '123456',
+        ];
+
+        $response = $this
+            ->json('POST', $this->routes['adminLogin'], $request)
+            ->assertStatus(Response::HTTP_OK)
+            ->assertJsonStructure([
+                'admin' => [
+                    'id',
+                    'name',
+                    'email',
+                    'avatar_url',
+                    'created_at',
+                ],
+                'token' => [
+                    'access_token',
+                    'type',
+                ],
+            ])
+            ->assertJson([
+                'admin' => [
+                    'id' => $admin->id,
+                    'email' => $admin->email,
+                    'name' => $admin->name,
+                    'avatar_url' => null,
+                ],
+
+            ]);
+
+        $this->assertInstanceOf(LoggedInAdminResource::class, $response->getOriginalContent());
+    }
+
+    /**
+     * An admin can not login without required input.
+     *
+     * @return void
+     */
+    public function testAnAdminCanNotLoginWithoutRequiredInput()
+    {
+        $this
+            ->json('POST', $this->routes['adminLogin'], [])
+            ->assertStatus(Response::HTTP_UNPROCESSABLE_ENTITY)
+            ->assertJsonValidationErrorFor('email')
+            ->assertJsonValidationErrorFor('password');
+    }
+
+    /**
+     * An admin can not login with invalid credentials.
+     *
+     * @return void
+     */
+    public function testAnAdminCanNotLoginWithInvalidCredentials()
+    {
+        $admin = Admin::factory(['password' => Hash::make('123456')])->create();
+
+        $request = [
+            'email' => $admin->email,
+            'password' => $this->faker->password(),
+        ];
+
+        $this
+            ->json('POST', $this->routes['adminLogin'], $request)
+            ->assertStatus(Response::HTTP_UNAUTHORIZED)
+            ->assertJson([
+                'message' => 'Invalid credentials.',
+            ]);
     }
 }

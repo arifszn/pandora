@@ -153,7 +153,7 @@ class AuthController extends Controller
      * @throws NotFoundHttpException
      */
     #[OAT\Post(
-        tags: ['auth'],
+        tags: ['adminAuth'],
         path: '/api/admin/login',
         operationId: 'AuthController.adminLogin',
         requestBody: new OAT\RequestBody(
