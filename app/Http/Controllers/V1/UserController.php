@@ -14,7 +14,6 @@ class UserController extends Controller
      * Create a new controller instance.
      *
      * @param  UserService  $authService
-     * 
      * @return void
      */
     public function __construct(private UserService $userService)
@@ -25,7 +24,7 @@ class UserController extends Controller
     /**
      * Provides current authenticated user's data
      *
-     * @param Request $request
+     * @param  Request  $request
      */
     public function index(Request $request)
     {
