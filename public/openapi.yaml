@@ -78,6 +78,39 @@ paths:
       security:
         -
           BearerToken: []
+  /api/admin/login:
+    post:
+      tags:
+        - auth
+      summary: 'Login an admin.'
+      operationId: AuthController.adminLogin
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminLoginRequest'
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoggedInAdminResource'
+        '422':
+          description: 'Unprocessable entity'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                properties:
+                  message: { type: string, example: 'Invalid credentials.' }
+                type: object
 components:
   schemas:
     ValidationError:
@@ -98,6 +131,19 @@ components:
                 type: string
                 example: 'Error message 2'
           type: object
+      type: object
+    AdminLoginRequest:
+      required:
+        - email
+        - password
+      properties:
+        email:
+          type: string
+          format: email
+          example: root@admin.com
+        password:
+          type: string
+          example: '123456'
       type: object
     LoginRequest:
       required:
@@ -141,6 +187,33 @@ components:
         type:
           type: string
           example: bearer
+      type: object
+    AdminResource:
+      properties:
+        id:
+          type: integer
+          example: 1
+        name:
+          type: string
+          example: 'John Doe'
+        email:
+          type: string
+          example: john@example.com
+        avatar_url:
+          type: string
+          example: 'https://someplace.com/avatar'
+          nullable: true
+        created_at:
+          type: string
+          format: date-time
+          example: '2022-08-27T16:14:46.000000Z'
+      type: object
+    LoggedInAdminResource:
+      properties:
+        admin:
+          $ref: '#/components/schemas/AdminResource'
+        token:
+          $ref: '#/components/schemas/AccessTokenResource'
       type: object
     LoggedInUserResource:
       properties:
