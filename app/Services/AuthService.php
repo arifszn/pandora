@@ -75,11 +75,12 @@ class AuthService
 
     /**
      * Login an admin.
-     * 
-     * @param AdminLoginRequest $request 
-     * @return Admin 
-     * @throws HttpException 
-     * @throws NotFoundHttpException 
+     *
+     * @param  AdminLoginRequest  $request
+     * @return Admin
+     *
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
     public function loginAdmin(AdminLoginRequest $request): Admin
     {

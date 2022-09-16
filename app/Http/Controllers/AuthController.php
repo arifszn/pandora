@@ -133,7 +133,7 @@ class AuthController extends Controller
             new OAT\Response(
                 response: HttpResponse::HTTP_NO_CONTENT,
                 description: 'No content'
-            )
+            ),
         ]
     )]
     public function logout(Request $request): JsonResponse
@@ -145,11 +145,12 @@ class AuthController extends Controller
 
     /**
      * Login an admin.
-     * 
-     * @param AdminLoginRequest $request 
-     * @return JsonResponse 
-     * @throws HttpException 
-     * @throws NotFoundHttpException 
+     *
+     * @param  AdminLoginRequest  $request
+     * @return JsonResponse
+     *
+     * @throws HttpException
+     * @throws NotFoundHttpException
      */
     #[OAT\Post(
         tags: ['auth'],
