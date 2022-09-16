@@ -26,7 +26,7 @@ class UserController extends Controller
      *
      * @param  Request  $request
      */
-    public function index(Request $request)
+    public function me(Request $request)
     {
         return Response::json(new UserResource($request->user()));
     }
