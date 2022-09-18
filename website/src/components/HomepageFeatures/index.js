@@ -14,6 +14,14 @@ const FeatureList = [
     ),
   },
   {
+    title: 'Industry Standards',
+    description: (
+      <>
+        Kickstart your project with the best industry standards and practices.
+      </>
+    ),
+  },
+  {
     title: 'OpenAPI Specification',
     description: (
       <>
@@ -31,6 +39,15 @@ const FeatureList = [
       </>
     ),
   },
+  {
+    title: 'Multi Auth',
+    description: (
+      <>
+        Pandora supports API for both user and admin with industry-grade API
+        authentication system.
+      </>
+    ),
+  },
   // {
   //   title: 'API authentication',
   //   description: (
@@ -39,14 +56,7 @@ const FeatureList = [
   //     </>
   //   ),
   // },
-  // {
-  //   title: 'Industry Standard and Practice',
-  //   description: (
-  //     <>
-  //       TO DO
-  //     </>
-  //   ),
-  // },
+  //
 ];
 
 function Feature({ title, description }) {

@@ -50,11 +50,11 @@ hide_title: true
 **Pandora** is a modern, customized, feature-rich API starter kit to kickstart your next _REST_ API backend.
 
 ## Features
-
+- [API Documentation](/docs/api-documentation)
+  - [Redoc](/docs/api-documentation/redoc)
+  - [Swagger UI](/docs/api-documentation/swagger-ui)
 - [Dockerized](/docs/installation#with-docker-sail)
 - [OpenAPI Specification](/docs/features/openapi-specification)
-- [Redoc](/docs/api-documentation/redoc)
-- [Swagger UI](/docs/api-documentation/swagger-ui)
 - [Service Repository Pattern](/docs/features/service-repository-pattern)
 - [Testing](/docs/features/testing)
 - [API Resource](/docs/features/api-resource)

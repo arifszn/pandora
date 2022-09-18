@@ -58,10 +58,11 @@
 
 ## Features
 
+-   [API Documentation](https://arifszn.github.io/pandora/docs/api-documentation)
+    -   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
+    -   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 -   [Dockerized](https://arifszn.github.io/pandora/docs/installation#with-docker-sail)
 -   [OpenAPI Specification](https://arifszn.github.io/pandora/docs/features/openapi-specification)
--   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
--   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 -   [Service Repository Pattern](https://arifszn.github.io/pandora/docs/features/service-repository-pattern)
 -   [Testing](https://arifszn.github.io/pandora/docs/features/testing)
 -   [API Resource](https://arifszn.github.io/pandora/docs/features/api-resource)
