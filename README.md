@@ -87,7 +87,7 @@
 
 ## Documentation
 
-Complete documentation for Pandora can be found [here](https://arifszn.github.io/pandora).
+Complete documentation for Pandora can be found [**here**](https://arifszn.github.io/pandora).
 
 <p>
   <a href="https://arifszn.github.io/pandora">
