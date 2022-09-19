@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Cache\RateLimiting\Limit;
+use Illuminate\Contracts\Container\BindingResolutionException;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -32,24 +33,50 @@ class RouteServiceProvider extends ServiceProvider
             Route::middleware('api')
                 ->prefix('api')
                 ->group(function () {
-                    require base_path('routes/api/auth.php');
-
-                    Route::group([
-                        'middleware' => ['auth:user'],
-                    ], function () {
-                        require base_path('routes/api/profile.php');
-                    });
-
-                    Route::group([
-                        'middleware' => ['auth:admin'],
-                        'prefix' => 'admin'
-                    ], function () {
-                        require base_path('routes/api/admin/profile.php');
-                    });
+                    $this->getUserRoutes();
+                    $this->getAdminRoutes();
                 });
 
             Route::middleware('web')
                 ->group(base_path('routes/web.php'));
+        });
+    }
+
+    /**
+     * Get the user routes.
+     *
+     * @return void
+     *
+     * @throws BindingResolutionException
+     */
+    private function getUserRoutes()
+    {
+        require base_path('routes/api/auth.php');
+
+        Route::group([
+            'middleware' => ['auth:user'],
+        ], function () {
+            require base_path('routes/api/profile.php');
+        });
+    }
+
+    /**
+     * Get the admin routes.
+     *
+     * @return void
+     */
+    private function getAdminRoutes()
+    {
+        Route::group([
+            'prefix' => 'admin',
+        ], function () {
+            require base_path('routes/api/admin/auth.php');
+
+            Route::group([
+                'middleware' => ['auth:admin'],
+            ], function () {
+                require base_path('routes/api/admin/profile.php');
+            });
         });
     }
 

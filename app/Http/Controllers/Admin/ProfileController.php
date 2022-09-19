@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\AdminResource;
 use App\Services\AdminService;
-use OpenApi\Attributes as OAT;
-use Illuminate\Http\Response as HttpResponse;
 use Illuminate\Http\JsonResponse;
-use Illuminate\Support\Facades\Response;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response as HttpResponse;
+use Illuminate\Support\Facades\Response;
+use OpenApi\Attributes as OAT;
 
 class ProfileController extends Controller
 {
