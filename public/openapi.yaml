@@ -8,6 +8,70 @@ servers:
     url: 'http://localhost'
     description: 'Local API server'
 paths:
+  /api/admin/login:
+    post:
+      tags:
+        - adminAuth
+      summary: 'Login an admin'
+      description: 'Login an admin.'
+      operationId: Admin.AuthController.login
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/AdminLoginRequest'
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/LoggedInAdminResource'
+        '422':
+          description: 'Unprocessable entity'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ValidationError'
+        '401':
+          description: Unauthorized
+          content:
+            application/json:
+              schema:
+                properties:
+                  message: { type: string, example: 'Invalid credentials.' }
+                type: object
+  /api/admin/logout:
+    post:
+      tags:
+        - adminAuth
+      summary: 'Logout an admin'
+      description: 'Logout an admin.'
+      operationId: Admin.AuthController.logout
+      responses:
+        '204':
+          description: 'No content'
+      security:
+        -
+          BearerToken: []
+  /api/admin/profile:
+    get:
+      tags:
+        - adminProfile
+      summary: me
+      description: 'Get the authenticated admin.'
+      operationId: Admin.ProfileController.me
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminResource'
+      security:
+        -
+          BearerToken: []
   /api/signup:
     post:
       tags:
@@ -75,53 +139,6 @@ paths:
       summary: 'Logout a user'
       description: 'Logout a user.'
       operationId: AuthController.logout
-      responses:
-        '204':
-          description: 'No content'
-      security:
-        -
-          BearerToken: []
-  /api/admin/login:
-    post:
-      tags:
-        - adminAuth
-      summary: 'Login an admin'
-      description: 'Login an admin.'
-      operationId: AuthController.adminLogin
-      requestBody:
-        required: true
-        content:
-          application/json:
-            schema:
-              $ref: '#/components/schemas/AdminLoginRequest'
-      responses:
-        '200':
-          description: Ok
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/LoggedInAdminResource'
-        '422':
-          description: 'Unprocessable entity'
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/ValidationError'
-        '401':
-          description: Unauthorized
-          content:
-            application/json:
-              schema:
-                properties:
-                  message: { type: string, example: 'Invalid credentials.' }
-                type: object
-  /api/admin/logout:
-    post:
-      tags:
-        - adminAuth
-      summary: 'Logout an admin'
-      description: 'Logout an admin.'
-      operationId: AuthController.adminLogout
       responses:
         '204':
           description: 'No content'
@@ -291,3 +308,6 @@ tags:
   -
     name: profile
     description: 'User profile'
+  -
+    name: adminProfile
+    description: 'Admin profile'
