@@ -8,6 +8,23 @@ servers:
     url: 'http://localhost'
     description: 'Local API server'
 paths:
+  /api/admin/profile:
+    get:
+      tags:
+        - adminProfile
+      summary: me
+      description: 'Get the authenticated admin.'
+      operationId: Admin.ProfileController.me
+      responses:
+        '200':
+          description: Ok
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AdminResource'
+      security:
+        -
+          BearerToken: []
   /api/signup:
     post:
       tags:
@@ -291,3 +308,6 @@ tags:
   -
     name: profile
     description: 'User profile'
+  -
+    name: adminProfile
+    description: 'Admin profile'

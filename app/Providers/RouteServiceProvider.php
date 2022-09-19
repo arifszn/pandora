@@ -39,6 +39,13 @@ class RouteServiceProvider extends ServiceProvider
                     ], function () {
                         require base_path('routes/api/profile.php');
                     });
+
+                    Route::group([
+                        'middleware' => ['auth:admin'],
+                        'prefix' => 'admin'
+                    ], function () {
+                        require base_path('routes/api/admin/profile.php');
+                    });
                 });
 
             Route::middleware('web')
