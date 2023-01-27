@@ -105,7 +105,7 @@ Complete documentation for Pandora can be found [**here**](https://arifszn.githu
 
 **Prerequisite**
 
--   PHP 8.1
+-   PHP 8.2
 
 To setup Pandora, first clone the project and change the directory.
 
@@ -133,7 +133,7 @@ Then follow the process using either **[Docker](#with-docker-sail)** or **[Witho
         -u "$(id -u):$(id -g)" \
         -v $(pwd):/var/www/html \
         -w /var/www/html \
-        laravelsail/php81-composer:latest \
+        laravelsail/php82-composer:latest \
         composer install --ignore-platform-reqs
     ```
 
