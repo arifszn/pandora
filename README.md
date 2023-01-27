@@ -48,7 +48,7 @@
 
 <p align="center">
   <a href="https://arifszn.github.io/pandora">
-    <img src="https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png" alt="Preview" width="60%"/>
+    <img src="https://raw.githubusercontent.com/arifszn/pandora/main/doc/static/img/assets/redoc.png" alt="Preview" width="60%"/>
   </a>
   <br/>
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
