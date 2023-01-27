@@ -45,7 +45,7 @@ jobs:
     strategy:
       fail-fast: true
       matrix:
-        php: [8.1]
+        php: [8.2]
 
     steps:
       - name: Checkout repository
