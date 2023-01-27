@@ -1,6 +1,6 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Feature\User;
 
 use App\Events\UserSignedUp;
 use App\Http\Resources\LoggedInUserResource;
