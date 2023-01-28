@@ -13,6 +13,6 @@ return [
     ],
 
     'frontend' => [
-        'enable' => (bool) env('ENABLE_FRONTEND', true)
-    ]
+        'enable' => (bool) env('ENABLE_FRONTEND', true),
+    ],
 ];
