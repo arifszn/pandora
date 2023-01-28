@@ -1,6 +1,6 @@
 <?php
 
-use App\Http\Controllers\AuthController;
+use App\Http\Controllers\User\AuthController;
 use Illuminate\Support\Facades\Route;
 
 Route::post('/signup', [AuthController::class, 'signup']);

@@ -35,11 +35,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * An admin can login successfully.
+     * Admin can login successfully.
      *
      * @return void
      */
-    public function testAnAdminCanLoginSuccessfully()
+    public function test_admin_can_login_successfully()
     {
         $admin = Admin::factory(['password' => Hash::make('123456')])->create();
 
@@ -78,11 +78,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * An admin can not login without required input.
+     * Admin can not login without required input.
      *
      * @return void
      */
-    public function testAnAdminCanNotLoginWithoutRequiredInput()
+    public function test_admin_can_not_login_without_required_input()
     {
         $this
             ->json('POST', $this->routes['adminLogin'], [])
@@ -92,11 +92,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * An admin can not login with invalid credentials.
+     * Admin can not login with invalid credentials.
      *
      * @return void
      */
-    public function testAnAdminCanNotLoginWithInvalidCredentials()
+    public function test_admin_can_not_login_with_invalid_credentials()
     {
         $admin = Admin::factory(['password' => Hash::make('123456')])->create();
 
@@ -114,11 +114,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * An admin can logout successfully.
+     * Admin can logout successfully.
      *
      * @return void
      */
-    public function testAnAdminCanLogoutSuccessfully()
+    public function test_admin_can_logout_successfully()
     {
         Sanctum::actingAs(Admin::factory()->create(), [], 'admin');
 

@@ -38,25 +38,37 @@
   </p>
 
   <p align="center">
-    <a href="https://arifszn.github.io/pandora">View Docs</a>
+    <a href="https://arifszn.github.io/pandora"><b>View Docs</b></a>
     ·
-    <a href="https://github.com/arifszn/pandora/issues">Report Bug</a>
+    <a href="https://github.com/arifszn/pandora/issues"><b>Report Bug</b></a>
     ·
-    <a href="https://github.com/arifszn/pandora/discussions">Request Feature</a>
+    <a href="https://github.com/arifszn/pandora/discussions"><b>Request Feature</b></a>
   </p>
 </p>
 
 <p align="center">
   <a href="https://arifszn.github.io/pandora">
-    <img src="https://raw.githubusercontent.com/arifszn/pandora/main/website/static/img/assets/redoc.png" alt="Preview" width="60%"/>
+    <img src="https://raw.githubusercontent.com/arifszn/pandora/main/doc/static/img/assets/redoc.png" alt="Preview" width="60%"/>
   </a>
   <br/>
   <a href="#arifszn"><img src="https://arifszn.github.io/assets/img/drop-shadow.png" width="50%" alt="Shadow"/></a>
 </p>
 
-**Pandora** is a modern, customized, feature-rich API starter kit to kickstart your next _REST_ API backend.
+Welcome to **Pandora**, a powerful and customizable API starter kit for building your next REST API backend.
 
-## Features
+With Pandora, you can quickly set up a robust and fully-featured API, complete with documentation, testing, and a variety of functionalities.
+
+Some of the features of Pandora include:
+
+-   **API documentation:** With Redoc and Swagger UI, you can easily document and test your API endpoints.
+-   **Docker-ready:** Pandora comes with a pre-configured Docker setup, making it easy to get started with your development.
+-   **OpenAPI specification:** The API is built using the OpenAPI specification, ensuring compatibility with a wide range of tools and platforms.
+-   **Service repository pattern:** The architecture is built using the service repository pattern, making it easy to manage and scale your codebase.
+-   **Testing:** The starter kit includes a comprehensive set of tests to ensure your API is working as expected.
+-   **Multi-auth:** Pandora includes support for multiple authentication methods, including admin and user auth.
+-   **CI/CD:** The starter kit is configured for continuous integration and deployment, making it easy to keep your codebase up-to-date.
+
+<!-- ## Overview
 
 -   [API Documentation](https://arifszn.github.io/pandora/docs/api-documentation)
     -   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
@@ -72,7 +84,7 @@
 
 ## Functionalities
 
--   [Multi Auth](https://arifszn.github.io/pandora/docs/functionalities/authentication)
+-   [Multi Auth](https://arifszn.github.io/pandora/docs/functionalities/authentication) -->
 
 <!-- -   REST API
 -   Multi auth
@@ -84,22 +96,6 @@
 -   Resource
 -   Service Repository pattern
 -   Optional Firebase Authentication -->
-
-## Documentation
-
-Complete documentation for Pandora can be found [**here**](https://arifszn.github.io/pandora).
-
-<p>
-  <a href="https://arifszn.github.io/pandora">
-    <img src="https://user-images.githubusercontent.com/45073703/188283209-2ecb6fcb-b6e4-4e96-9ad4-168535ba10ce.png" alt="Documentation" width="70%"/>
-  </a>
-  <br/>
-</p>
-
-**The API documentation:**
-
--   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
--   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
 
 ## Installation
 
@@ -188,6 +184,15 @@ To learn more about Sail, visit the [official Doc](https://laravel.com/docs/9.x/
     ```shell
     php artisan serve
     ```
+
+## Documentation
+
+**The API documentation:**
+
+-   [Redoc](https://arifszn.github.io/pandora/docs/api-documentation/redoc)
+-   [Swagger UI](https://arifszn.github.io/pandora/docs/api-documentation/swagger-ui)
+
+Complete documentation for Pandora can be found [**here**](https://arifszn.github.io/pandora).
 
 ## Support
 

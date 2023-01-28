@@ -51,12 +51,12 @@ class RouteServiceProvider extends ServiceProvider
      */
     private function getUserRoutes()
     {
-        require base_path('routes/api/auth.php');
+        require base_path('routes/api/user/auth.php');
 
         Route::group([
             'middleware' => ['auth:user'],
         ], function () {
-            require base_path('routes/api/profile.php');
+            require base_path('routes/api/user/profile.php');
         });
     }
 
