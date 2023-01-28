@@ -9,7 +9,7 @@
         <title>{{Config::get('app.name')}}</title>
         
         @viteReactRefresh
-        @vite('resources/js/app.jsx')
+        @vite('resources/js/admin/main.jsx')
     </head>
     <body class="antialiased">
         <div id="root"></div>
