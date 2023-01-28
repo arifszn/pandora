@@ -42,11 +42,11 @@ class ProfileTest extends TestCase
     }
 
     /**
-     * An admin can get his profile.
+     * Admin can get his profile details.
      *
      * @return void
      */
-    public function testAnAdminCanGetHisProfile()
+    public function test_admin_can_get_profile_details()
     {
         $response = $this
             ->json('GET', $this->routes['me'])

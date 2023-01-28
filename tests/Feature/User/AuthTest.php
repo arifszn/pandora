@@ -38,11 +38,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can signup successfully.
+     * User can signup successfully.
      *
      * @return void
      */
-    public function testAUserCanSignupSuccessfully()
+    public function test_user_can_signup_successfully()
     {
         Event::fake();
 
@@ -84,11 +84,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can not signup without required input.
+     * User can not signup without required input.
      *
      * @return void
      */
-    public function testAUserCanNotSignupWithoutRequiredInput()
+    public function test_user_can_not_signup_without_required_input()
     {
         $this
             ->json('POST', $this->routes['signup'], [])
@@ -99,11 +99,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can not signup with conflicting email.
+     * User can not signup with conflicting email.
      *
      * @return void
      */
-    public function testAUserCanNotSignupWithConflictingEmail()
+    public function test_user_can_not_signup_with_conflicting_email()
     {
         $user = User::factory()->create();
 
@@ -128,11 +128,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can login successfully.
+     * User can login successfully.
      *
      * @return void
      */
-    public function testAUserCanLoginSuccessfully()
+    public function test_user_can_login_successfully()
     {
         $user = User::factory(['password' => Hash::make('123456')])->create();
 
@@ -171,11 +171,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can not login without required input.
+     * User can not login without required input.
      *
      * @return void
      */
-    public function testAUserCanNotLoginWithoutRequiredInput()
+    public function test_user_can_not_login_without_required_input()
     {
         $this
             ->json('POST', $this->routes['login'], [])
@@ -185,11 +185,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can not login with invalid credentials.
+     * User can not login with invalid credentials.
      *
      * @return void
      */
-    public function testAUserCanNotLoginWithInvalidCredentials()
+    public function test_user_can_not_login_with_invalid_credentials()
     {
         $user = User::factory(['password' => Hash::make('123456')])->create();
 
@@ -207,11 +207,11 @@ class AuthTest extends TestCase
     }
 
     /**
-     * A user can logout successfully.
+     * User can logout successfully.
      *
      * @return void
      */
-    public function testAUserCanLogoutSuccessfully()
+    public function test_user_can_logout_successfully()
     {
         Sanctum::actingAs(User::factory()->create(), [], 'user');
 

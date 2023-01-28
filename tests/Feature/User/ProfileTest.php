@@ -42,11 +42,11 @@ class ProfileTest extends TestCase
     }
 
     /**
-     * A user can get his profile.
+     * User can get his profile details.
      *
      * @return void
      */
-    public function testAUserCanGetHisProfile()
+    public function test_user_can_get_profile_details()
     {
         $response = $this
             ->json('GET', $this->routes['me'])
