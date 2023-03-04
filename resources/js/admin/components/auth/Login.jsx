@@ -25,9 +25,7 @@ const Login = () => {
           <Form.Item
             name="email"
             label={
-              <label className="block text-sm font-medium text-gray-900">
-                Email
-              </label>
+              <p className="block text-sm font-medium text-gray-900">Email</p>
             }
             rules={[
               {
@@ -41,7 +39,7 @@ const Login = () => {
             ]}
           >
             <Input
-              placeholder="Email"
+              placeholder="name@example.com"
               className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
             />
           </Form.Item>
@@ -50,9 +48,9 @@ const Login = () => {
           <Form.Item
             name="password"
             label={
-              <label className="block text-sm font-medium text-gray-900">
+              <p className="block text-sm font-medium text-gray-900">
                 Password
-              </label>
+              </p>
             }
             rules={[
               {
@@ -62,20 +60,20 @@ const Login = () => {
             ]}
           >
             <Input.Password
-              placeholder="Password"
+              placeholder="••••••••"
               visibilityToggle={false}
               className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
             />
           </Form.Item>
         </div>
-        <div className="flex items-center justify-end">
+        {/* <div className="flex items-center justify-end">
           <a href="#" className="text-gray-500 dark:text-gray-300 text-xs">
             Forgot password?
           </a>
-        </div>
+        </div> */}
 
-        <div className="text-center">
-          <button className="btn btn-primary btn-block">Login</button>
+        <div className="text-center ">
+          <button className="btn btn-primary btn-block mt-4">Login</button>
         </div>
       </Form>
     </AuthLayout>

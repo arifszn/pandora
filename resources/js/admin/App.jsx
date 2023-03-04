@@ -1,6 +1,7 @@
 import { ConfigProvider } from 'antd';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import '../shared/assets/css/index.css';
+import { theme } from '../shared/constants';
 import Login from './components/auth/Login';
 import NotFound from './components/Notfound';
 
@@ -17,7 +18,7 @@ const App = () => {
     <ConfigProvider
       theme={{
         token: {
-          colorPrimary: '#00b96b',
+          colorPrimary: theme.colorPrimary,
         },
       }}
     >
