@@ -1,5 +1,5 @@
 import AuthLayout from './AuthLayout';
-import { Divider, Form, Input, Typography } from 'antd';
+import { Form, Input } from 'antd';
 import { useEffect, useState } from 'react';
 import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
 import axios from 'axios';

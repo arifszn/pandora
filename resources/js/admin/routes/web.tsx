@@ -1,6 +1,5 @@
 import { ReactNode } from 'react';
 import Login from '../components/auth/Login';
-import Dashboard from '../components/dashboard';
 
 type Route = {
   url: string;

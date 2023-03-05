@@ -1,7 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Admin } from '../../inrterfaces/admin';
 
-export interface AdminState extends Admin {}
+export type AdminState = Admin;
 
 const initialState: AdminState | null = null;
 
@@ -14,7 +14,7 @@ export const adminSlice = createSlice({
 
       return state;
     },
-    logout: (state) => {
+    logout: () => {
       //;
     },
   },

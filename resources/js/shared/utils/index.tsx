@@ -1,4 +1,3 @@
-import { notification } from 'antd';
 import { toast } from 'sonner';
 
 enum NotificationType {
@@ -13,7 +12,7 @@ export const setPageTitle = (title: string) => {
 };
 
 const showNotification = (
-  message: string = 'Something went wrong',
+  message = 'Something went wrong',
   type: NotificationType = NotificationType.ERROR,
   description?: string
 ) => {
@@ -23,8 +22,8 @@ const showNotification = (
 };
 
 export const handleErrorResponse = (
-  error: any,
-  callback?: Function,
+  error: Error,
+  callback?: () => void,
   errorMessage?: string
 ) => {
   console.error(error);
