@@ -1,8 +1,7 @@
-import { ReactNode } from 'react';
 import loginBg from '../../../shared/assets/img/login-bg.jpg';
 
 export type AuthLayoutProps = {
-  children: ReactNode;
+  children: JSX.Element;
 };
 
 const AuthLayout = ({ children }: AuthLayoutProps) => {

@@ -9,6 +9,8 @@ import { login } from '../../store/slices/adminSlice';
 import { Admin } from '../../inrterfaces/admin';
 import Button from '../../../shared/components/atoms/button';
 import { RootState } from '../../store';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { webRoutes } from '../../routes/web';
 
 type FormValues = {
   email: string;
@@ -16,8 +18,11 @@ type FormValues = {
 };
 
 const Login = () => {
-  const admin = useSelector((state: RootState) => state.admin);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || webRoutes.dashboard.url;
+  const admin = useSelector((state: RootState) => state.admin);
   const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm();
 
@@ -26,7 +31,9 @@ const Login = () => {
   }, []);
 
   useEffect(() => {
-    // redirect to dashboard
+    if (admin) {
+      navigate(from, { replace: true });
+    }
   }, [admin]);
 
   const onSubmit = (values: FormValues) => {
@@ -123,6 +130,7 @@ const Login = () => {
             className="mt-4 bg-neutral text-primary-content"
             block
             loading={loading}
+            size="large"
             htmlType={'submit'}
           >
             Login
