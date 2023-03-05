@@ -9,7 +9,7 @@ export type RequireAuthProps = {
 
 const RequireAuth = ({ children }: RequireAuthProps) => {
   const admin = useSelector((state: RootState) => state.admin);
-  let location = useLocation();
+  const location = useLocation();
 
   if (!admin) {
     return (

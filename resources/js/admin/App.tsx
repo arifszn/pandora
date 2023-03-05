@@ -1,11 +1,4 @@
-import { ConfigProvider } from 'antd';
-import {
-  createBrowserRouter,
-  Route,
-  RouterProvider,
-  Routes,
-} from 'react-router-dom';
-import { antdConfig } from '../shared/constants';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import ErrorPage from './components/ErrorPage';
 import 'antd/dist/reset.css';
 import '../shared/assets/css/index.css';
@@ -34,11 +27,10 @@ const router = createBrowserRouter([
 
 const App = () => {
   return (
-    <ConfigProvider {...antdConfig}>
+    <div className="fade-in">
       <Toaster />
-      <div className="fade-in">
-        <RouterProvider router={router} />
-        {/* <Routes>
+      <RouterProvider router={router} />
+      {/* <Routes>
           <Route
             path={webRoutes.login.url}
             element={webRoutes.login.component}
@@ -52,8 +44,7 @@ const App = () => {
             />
           </Route>
         </Routes> */}
-      </div>
-    </ConfigProvider>
+    </div>
   );
 };
 
