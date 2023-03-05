@@ -1,15 +1,22 @@
 import { ConfigProvider } from 'antd';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import '../shared/assets/css/index.css';
 import { theme } from '../shared/constants';
-import Login from './components/auth/Login';
-import NotFound from './components/Notfound';
+import ErrorPage from './components/ErrorPage';
+import 'antd/dist/reset.css';
+import '../shared/assets/css/index.css';
+import { webRoutes } from './routes/web';
+import { Toaster } from 'sonner';
 
 const router = createBrowserRouter([
   {
-    path: '/admin/login',
-    element: <Login />,
-    errorElement: <NotFound />,
+    path: webRoutes.login.url,
+    element: webRoutes.login.component,
+    errorElement: <ErrorPage />,
+  },
+  {
+    path: webRoutes.dashboard.url,
+    element: webRoutes.dashboard.component,
+    errorElement: <ErrorPage />,
   },
 ]);
 
@@ -22,7 +29,10 @@ const App = () => {
         },
       }}
     >
-      <RouterProvider router={router} />
+      <Toaster />
+      <div className="fade-in">
+        <RouterProvider router={router} />
+      </div>
     </ConfigProvider>
   );
 };

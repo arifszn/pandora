@@ -29,7 +29,10 @@
     "vite": "^4.0.0"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.9.3",
     "daisyui": "^2.51.3",
-    "react-icons": "^4.8.0"
+    "react-icons": "^4.8.0",
+    "react-redux": "^8.0.5",
+    "sonner": "^0.1.6"
   }
 }

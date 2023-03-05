@@ -1,12 +1,39 @@
 import AuthLayout from './AuthLayout';
 import { Button, Divider, Form, Input, Typography } from 'antd';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
+import axios from 'axios';
+import { apiRoutes } from '../../routes/api';
+import { useDispatch } from 'react-redux';
+import { login } from '../../store/slices/adminSlice';
 
 const Login = () => {
+  const dispatch = useDispatch();
   const [loading, setLoading] = useState(false);
   const [form] = Form.useForm();
 
-  const onSubmit = (values) => {};
+  useEffect(() => {
+    setPageTitle('Admin Login');
+  }, []);
+
+  const onSubmit = (values) => {
+    setLoading(true);
+
+    axios
+      .post(apiRoutes.login, {
+        email: values.email,
+        password: values.password,
+      })
+      .then((response) => {
+        // to do login admin
+      })
+      .catch((error) => {
+        handleErrorResponse(error);
+      })
+      .finally(() => {
+        setLoading(false);
+      });
+  };
 
   return (
     <AuthLayout>
@@ -40,7 +67,7 @@ const Login = () => {
           >
             <Input
               placeholder="name@example.com"
-              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
             />
           </Form.Item>
         </div>
@@ -62,7 +89,7 @@ const Login = () => {
             <Input.Password
               placeholder="••••••••"
               visibilityToggle={false}
-              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5"
+              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
             />
           </Form.Item>
         </div>
@@ -73,7 +100,7 @@ const Login = () => {
         </div> */}
 
         <div className="text-center ">
-          <button className="btn btn-primary btn-block mt-4">Login</button>
+          <button className="btn btn-block mt-4">Login</button>
         </div>
       </Form>
     </AuthLayout>
