@@ -1,16 +1,18 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { Admin } from '../../inrterfaces/admin';
 
-const initialState = null;
+export interface AdminState extends Admin {}
+
+const initialState: AdminState | null = null;
 
 export const adminSlice = createSlice({
   name: 'admin',
   initialState: initialState,
   reducers: {
-    login: (previousState, action) => {
-      console.log(previousState);
-      console.log(action);
+    login: (state, action) => {
+      state = action.payload;
 
-      return previousState;
+      return state;
     },
     logout: (state) => {
       //;

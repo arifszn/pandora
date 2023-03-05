@@ -7,7 +7,7 @@ const ErrorPage = () => {
       <Result
         status="500"
         title="500"
-        subTitle="Sorry, something went wrong."
+        subTitle="Sorry, something went wrong!"
       />
     </div>
   );

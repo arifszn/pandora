@@ -1,8 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import { ReactNode } from 'react';
 import loginBg from '../../../shared/assets/img/login-bg.jpg';
 
-const AuthLayout = ({ children }) => {
+export type AuthLayoutProps = {
+  children: ReactNode;
+};
+
+const AuthLayout = ({ children }: AuthLayoutProps) => {
   return (
     <div className="relative">
       <div className="absolute inset-x-0 -top-48 -bottom-14 overflow-hidden bg-indigo-50">
@@ -34,10 +37,6 @@ const AuthLayout = ({ children }) => {
       </div>
     </div>
   );
-};
-
-AuthLayout.propTypes = {
-  children: PropTypes.node,
 };
 
 export default AuthLayout;

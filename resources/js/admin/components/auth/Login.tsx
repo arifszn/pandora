@@ -1,22 +1,35 @@
 import AuthLayout from './AuthLayout';
-import { Button, Divider, Form, Input, Typography } from 'antd';
+import { Divider, Form, Input, Typography } from 'antd';
 import { useEffect, useState } from 'react';
 import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
 import axios from 'axios';
 import { apiRoutes } from '../../routes/api';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/slices/adminSlice';
+import { Admin } from '../../inrterfaces/admin';
+import Button from '../../../shared/components/atoms/button';
+import { RootState } from '../../store';
+
+type FormValues = {
+  email: string;
+  password: string;
+};
 
 const Login = () => {
+  const admin = useSelector((state: RootState) => state.admin);
   const dispatch = useDispatch();
-  const [loading, setLoading] = useState(false);
+  const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm();
 
   useEffect(() => {
     setPageTitle('Admin Login');
   }, []);
 
-  const onSubmit = (values) => {
+  useEffect(() => {
+    // redirect to dashboard
+  }, [admin]);
+
+  const onSubmit = (values: FormValues) => {
     setLoading(true);
 
     axios
@@ -25,19 +38,25 @@ const Login = () => {
         password: values.password,
       })
       .then((response) => {
-        // to do login admin
+        const admin: Admin = {
+          id: response.data.admin.id,
+          name: response.data.admin.name,
+          email: response.data.admin.email,
+          avatarUrl: response.data.admin.avatar_url,
+          createdAt: response.data.admin.created_at,
+          token: response.data.token.access_token,
+        };
+        dispatch(login(admin));
       })
       .catch((error) => {
         handleErrorResponse(error);
-      })
-      .finally(() => {
         setLoading(false);
       });
   };
 
   return (
     <AuthLayout>
-      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-center">
+      <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left">
         Admin Login
       </h1>
       <Form
@@ -67,7 +86,7 @@ const Login = () => {
           >
             <Input
               placeholder="name@example.com"
-              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+              className="bg-gray-50 text-gray-900 sm:text-sm py-1.5"
             />
           </Form.Item>
         </div>
@@ -89,7 +108,7 @@ const Login = () => {
             <Input.Password
               placeholder="••••••••"
               visibilityToggle={false}
-              className="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg block w-full p-2.5"
+              className="bg-gray-50 text-gray-900 sm:text-sm py-1.5"
             />
           </Form.Item>
         </div>
@@ -100,7 +119,14 @@ const Login = () => {
         </div> */}
 
         <div className="text-center ">
-          <button className="btn btn-block mt-4">Login</button>
+          <Button
+            className="mt-4 bg-neutral text-primary-content"
+            block
+            loading={loading}
+            htmlType={'submit'}
+          >
+            Login
+          </Button>
         </div>
       </Form>
     </AuthLayout>
