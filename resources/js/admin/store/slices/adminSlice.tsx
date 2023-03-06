@@ -14,8 +14,10 @@ export const adminSlice = createSlice({
 
       return state;
     },
-    logout: () => {
-      //;
+    logout: (state) => {
+      state = null;
+
+      return state;
     },
   },
 });

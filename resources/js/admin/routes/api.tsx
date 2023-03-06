@@ -1,9 +1,6 @@
 import { API_URL } from '../../shared/utils';
 
-type Routes = {
-  [name: string]: string;
-};
-
-export const apiRoutes: Routes = {
+export const apiRoutes = {
   login: `${API_URL}/admin/login`,
+  logout: `${API_URL}/admin/logout`,
 };

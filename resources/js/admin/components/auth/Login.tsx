@@ -2,7 +2,6 @@ import AuthLayout from './AuthLayout';
 import { Form, Input } from 'antd';
 import { useEffect, useState } from 'react';
 import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
-import axios from 'axios';
 import { apiRoutes } from '../../routes/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/slices/adminSlice';
@@ -11,6 +10,7 @@ import Button from '../../../shared/components/atoms/button';
 import { RootState } from '../../store';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
+import { defaultHttp } from '../../../shared/utils/http';
 
 type FormValues = {
   email: string;
@@ -39,7 +39,7 @@ const Login = () => {
   const onSubmit = (values: FormValues) => {
     setLoading(true);
 
-    axios
+    defaultHttp
       .post(apiRoutes.login, {
         email: values.email,
         password: values.password,
