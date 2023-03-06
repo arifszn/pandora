@@ -1,7 +1,8 @@
+import { ReactNode } from 'react';
 import loginBg from '../../../shared/assets/img/login-bg.jpg';
 
 export type AuthLayoutProps = {
-  children: JSX.Element;
+  children: ReactNode;
 };
 
 const AuthLayout = ({ children }: AuthLayoutProps) => {
@@ -25,7 +26,7 @@ const AuthLayout = ({ children }: AuthLayoutProps) => {
         <div className="mx-auto max-w-2xl lg:max-w-4xl lg:px-12">
           <section>
             <div className="flex flex-col items-center justify-center px-6 py-8 mx-auto md:h-screen lg:py-0">
-              <div className="w-full bg-white rounded-lg shadow md:mt-0 sm:max-w-md xl:p-0">
+              <div className="w-full bg-gradient-to-b from-white rounded-lg md:mt-0 sm:max-w-md xl:p-0 opacity-90">
                 <div className="p-8 space-y-4 md:space-y-6 md:p-10">
                   {children}
                 </div>

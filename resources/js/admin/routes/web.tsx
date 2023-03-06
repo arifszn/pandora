@@ -1,9 +1,10 @@
+import { ReactNode } from 'react';
 import Login from '../components/auth/Login';
 import Dashboard from '../components/dashboard';
 
 type Route = {
   url: string;
-  component: JSX.Element;
+  component: ReactNode;
   authRequired: boolean;
 };
 

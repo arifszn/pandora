@@ -8,6 +8,7 @@ export const antdConfig: ConfigProviderProps = {
   theme: {
     token: {
       colorPrimary: theme.colorPrimary,
+      fontFamily: 'Roboto',
     },
   },
 };
