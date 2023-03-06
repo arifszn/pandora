@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import { Admin } from '../../inrterfaces/admin';
 
-export type AdminState = Admin;
+export type AdminState = Admin | null;
 
-const initialState: AdminState | null = null;
+const initialState: AdminState = null;
 
 export const adminSlice = createSlice({
   name: 'admin',

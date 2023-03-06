@@ -1,10 +1,10 @@
-import { ReactNode } from 'react';
 import Login from '../components/auth/Login';
 import Dashboard from '../components/dashboard';
+import Users from '../components/users';
 
 type Route = {
   url: string;
-  component: ReactNode;
+  component: JSX.Element;
   authRequired: boolean;
 };
 
@@ -20,7 +20,14 @@ const dashboardRoute: Route = {
   authRequired: true,
 };
 
+const userRoute: Route = {
+  url: '/admin/users',
+  component: <Users />,
+  authRequired: true,
+};
+
 export const webRoutes = {
   login: loginRoute,
   dashboard: dashboardRoute,
+  users: userRoute,
 };

@@ -1,13 +1,15 @@
 import { ConfigProviderProps } from 'antd/es/config-provider';
 
-export const theme = {
-  colorPrimary: '#1DA74D',
+export const config = {
+  appName: 'Pandora',
+  themeColor: '#1DA74D',
+  helpLink: 'https://github.com/arifszn/pandora/issues/new',
 };
 
 export const antdConfig: ConfigProviderProps = {
   theme: {
     token: {
-      colorPrimary: theme.colorPrimary,
+      colorPrimary: config.themeColor,
       fontFamily: 'Roboto',
     },
   },

@@ -21,6 +21,10 @@ const router = createBrowserRouter([
         path: webRoutes.dashboard.url,
         element: <RequireAuth>{webRoutes.dashboard.component}</RequireAuth>,
       },
+      {
+        path: webRoutes.users.url,
+        element: <RequireAuth>{webRoutes.users.component}</RequireAuth>,
+      },
     ],
   },
 ]);
@@ -30,20 +34,6 @@ const App = () => {
     <div className="fade-in">
       <Toaster />
       <RouterProvider router={router} />
-      {/* <Routes>
-          <Route
-            path={webRoutes.login.url}
-            element={webRoutes.login.component}
-          />
-          <Route element={<Layout />}>
-            <Route
-              path={webRoutes.dashboard.url}
-              element={
-                <RequireAuth>{webRoutes.dashboard.component}</RequireAuth>
-              }
-            />
-          </Route>
-        </Routes> */}
     </div>
   );
 };

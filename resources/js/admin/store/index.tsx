@@ -1,5 +1,5 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
-import adminSlice from './slices/adminSlice';
+import adminSlice, { AdminState } from './slices/adminSlice';
 import {
   persistReducer,
   FLUSH,
@@ -32,5 +32,7 @@ export const store = configureStore({
     }),
 });
 
-export type RootState = ReturnType<typeof store.getState>;
+export type RootState = {
+  admin: AdminState;
+};
 export type AppDispatch = typeof store.dispatch;

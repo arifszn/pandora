@@ -1,11 +1,10 @@
-import { ReactNode } from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
 import { webRoutes } from '../../routes/web';
 import { RootState } from '../../store';
 
 export type RequireAuthProps = {
-  children: ReactNode;
+  children: JSX.Element;
 };
 
 const RequireAuth = ({ children }: RequireAuthProps) => {
