@@ -9,6 +9,11 @@ import RequireAuth from './components/layout/RequireAuth';
 
 const router = createBrowserRouter([
   {
+    path: webRoutes.admin.url,
+    element: webRoutes.admin.component,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: webRoutes.login.url,
     element: webRoutes.login.component,
     errorElement: <ErrorPage />,

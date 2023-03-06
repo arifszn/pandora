@@ -1,11 +1,18 @@
 import Login from '../components/auth/Login';
 import Dashboard from '../components/dashboard';
+import AdminRedirect from '../components/layout/adminRedirect';
 import Users from '../components/users';
 
 type Route = {
   url: string;
   component: JSX.Element;
   authRequired: boolean;
+};
+
+const adminRoute: Route = {
+  url: '/admin',
+  component: <AdminRedirect />,
+  authRequired: false,
 };
 
 const loginRoute: Route = {
@@ -27,6 +34,7 @@ const userRoute: Route = {
 };
 
 export const webRoutes = {
+  admin: adminRoute,
   login: loginRoute,
   dashboard: dashboardRoute,
   users: userRoute,
