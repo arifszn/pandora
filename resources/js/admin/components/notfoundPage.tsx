@@ -1,9 +1,9 @@
 import React from 'react';
 import { Result } from 'antd';
 
-const NotFound = () => {
+const NotFoundPage = () => {
   return (
-    <div className="mt-8">
+    <div className="flex items-center justify-center h-screen">
       <Result
         status="404"
         title="404"
@@ -13,4 +13,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import { Navigate, useLocation } from 'react-router-dom';
-import { webRoutes } from '../../routes/web';
-import { RootState } from '../../store';
+import { RootState } from '../store';
+import { webRoutes } from './web';
 
 export type RequireAuthProps = {
   children: JSX.Element;
@@ -12,9 +12,7 @@ const RequireAuth = ({ children }: RequireAuthProps) => {
   const location = useLocation();
 
   if (!admin) {
-    return (
-      <Navigate to={webRoutes.login.url} state={{ from: location }} replace />
-    );
+    return <Navigate to={webRoutes.login} state={{ from: location }} replace />;
   }
 
   return children;

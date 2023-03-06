@@ -7,10 +7,7 @@ const AdminRedirect = () => {
   const admin = useSelector((state: RootState) => state.admin);
 
   return (
-    <Navigate
-      to={admin ? webRoutes.dashboard.url : webRoutes.login.url}
-      replace
-    />
+    <Navigate to={admin ? webRoutes.dashboard : webRoutes.login} replace />
   );
 };
 

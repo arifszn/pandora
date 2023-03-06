@@ -26,7 +26,7 @@ const Layout = () => {
 
   useEffect(() => {
     if (!admin) {
-      navigate(webRoutes.login.url);
+      navigate(webRoutes.login);
     }
   }, [admin]);
 
@@ -61,7 +61,7 @@ const Layout = () => {
       <ProLayout
         {...defaultProps}
         location={location}
-        onMenuHeaderClick={() => navigate(webRoutes.dashboard.url)}
+        onMenuHeaderClick={() => navigate(webRoutes.dashboard)}
         menuItemRender={(item, dom) => (
           <a
             onClick={(e) => {

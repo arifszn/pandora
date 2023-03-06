@@ -1,6 +1,5 @@
-import AuthLayout from './AuthLayout';
 import { Form, Input } from 'antd';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
 import { apiRoutes } from '../../routes/api';
 import { useDispatch, useSelector } from 'react-redux';
@@ -21,7 +20,7 @@ const Login = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || webRoutes.dashboard.url;
+  const from = location.state?.from?.pathname || webRoutes.dashboard;
   const admin = useSelector((state: RootState) => state.admin);
   const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm();
@@ -62,7 +61,7 @@ const Login = () => {
   };
 
   return (
-    <AuthLayout>
+    <Fragment>
       <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left">
         Admin Login
       </h1>
@@ -137,7 +136,7 @@ const Login = () => {
           </Button>
         </div>
       </Form>
-    </AuthLayout>
+    </Fragment>
   );
 };
 
