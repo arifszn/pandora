@@ -1,7 +1,7 @@
 import { Spin } from 'antd';
 import { TbGridDots } from 'react-icons/tb';
 
-const DefaultLoading = () => {
+const PageLoading = () => {
   return (
     <div className="flex items-center justify-center h-screen">
       <Spin size="large" indicator={<TbGridDots className="icon-spin" />} />
@@ -9,4 +9,4 @@ const DefaultLoading = () => {
   );
 };
 
-export default DefaultLoading;
+export default PageLoading;

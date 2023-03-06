@@ -10,7 +10,10 @@
   },
   "devDependencies": {
     "@ant-design/pro-layout": "^7.8.3",
+    "@loadable/component": "^5.15.3",
     "@reduxjs/toolkit": "^1.9.3",
+    "@types/loadable__component": "^5.13.4",
+    "@types/nprogress": "^0.2.0",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.54.0",
@@ -26,6 +29,7 @@
     "eslint-plugin-react": "^7.32.1",
     "laravel-vite-plugin": "^0.7.2",
     "lodash": "^4.17.19",
+    "nprogress": "^0.2.0",
     "postcss": "^8.4.21",
     "prettier": "^2.8.3",
     "react": "^18.2.0",

@@ -1,15 +1,17 @@
 import { createBrowserRouter } from 'react-router-dom';
 import AuthLayout from '../components/auth/AuthLayout';
-import Login from '../components/auth/Login';
-import Dashboard from '../components/dashboard';
 import ErrorPage from '../components/errorPage';
 import Layout from '../components/layout';
 import AdminRedirect from '../components/layout/adminRedirect';
 import NotFoundPage from '../components/notfoundPage';
-import Users from '../components/users';
 import { webRoutes } from './web';
+import loadable from '@loadable/component';
+import ProgressBar from '../components/loading/progressBar';
 
 const errorElement = <ErrorPage />;
+const Login = loadable(() => import('../components/auth/Login'));
+const Dashboard = loadable(() => import('../components/dashboard'));
+const Users = loadable(() => import('../components/users'));
 
 export const browserRouter = createBrowserRouter([
   {
@@ -25,7 +27,7 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.login,
-        element: <Login />,
+        element: <Login fallback={<ProgressBar />} />,
       },
     ],
   },
@@ -37,11 +39,11 @@ export const browserRouter = createBrowserRouter([
     children: [
       {
         path: webRoutes.dashboard,
-        element: <Dashboard />,
+        element: <Dashboard fallback={<ProgressBar />} />,
       },
       {
         path: webRoutes.users,
-        element: <Users />,
+        element: <Users fallback={<ProgressBar />} />,
       },
     ],
   },

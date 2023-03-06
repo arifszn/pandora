@@ -1,13 +1,8 @@
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import ErrorPage from './components/errorPage';
+import { RouterProvider } from 'react-router-dom';
+import { Toaster } from 'sonner';
+import { browserRouter } from './routes/browserRouter';
 import 'antd/dist/reset.css';
 import '../shared/assets/css/index.css';
-import { webRoutes } from './routes/web';
-import { Toaster } from 'sonner';
-import Layout from './components/layout';
-import NotFoundPage from './components/notfoundPage';
-import RequireAuth from './routes/requireAuth';
-import { browserRouter } from './routes/browserRouter';
 
 const App = () => {
   return (
