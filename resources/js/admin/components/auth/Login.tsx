@@ -1,14 +1,15 @@
-import AuthLayout from './AuthLayout';
 import { Form, Input } from 'antd';
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 import { handleErrorResponse, setPageTitle } from '../../../shared/utils';
-import axios from 'axios';
 import { apiRoutes } from '../../routes/api';
 import { useDispatch, useSelector } from 'react-redux';
 import { login } from '../../store/slices/adminSlice';
 import { Admin } from '../../inrterfaces/admin';
 import Button from '../../../shared/components/atoms/button';
 import { RootState } from '../../store';
+import { useLocation, useNavigate } from 'react-router-dom';
+import { webRoutes } from '../../routes/web';
+import { defaultHttp } from '../../../shared/utils/http';
 
 type FormValues = {
   email: string;
@@ -16,8 +17,11 @@ type FormValues = {
 };
 
 const Login = () => {
-  const admin = useSelector((state: RootState) => state.admin);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from?.pathname || webRoutes.dashboard;
+  const admin = useSelector((state: RootState) => state.admin);
   const [loading, setLoading] = useState<boolean>(false);
   const [form] = Form.useForm();
 
@@ -26,13 +30,15 @@ const Login = () => {
   }, []);
 
   useEffect(() => {
-    // redirect to dashboard
+    if (admin) {
+      navigate(from, { replace: true });
+    }
   }, [admin]);
 
   const onSubmit = (values: FormValues) => {
     setLoading(true);
 
-    axios
+    defaultHttp
       .post(apiRoutes.login, {
         email: values.email,
         password: values.password,
@@ -55,7 +61,7 @@ const Login = () => {
   };
 
   return (
-    <AuthLayout>
+    <Fragment>
       <h1 className="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl text-left">
         Admin Login
       </h1>
@@ -123,13 +129,14 @@ const Login = () => {
             className="mt-4 bg-neutral text-primary-content"
             block
             loading={loading}
+            size="large"
             htmlType={'submit'}
           >
             Login
           </Button>
         </div>
       </Form>
-    </AuthLayout>
+    </Fragment>
   );
 };
 

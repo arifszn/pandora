@@ -3,7 +3,7 @@ import { Result } from 'antd';
 
 const ErrorPage = () => {
   return (
-    <div className="mt-8">
+    <div className="flex items-center justify-center h-screen">
       <Result
         status="500"
         title="500"

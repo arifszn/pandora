@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .fade-in {
   opacity: 1;
@@ -8,6 +14,11 @@
   animation-iteration-count: 1;
   animation-timing-function: ease-in;
   animation-duration: 1s;
+}
+
+.icon-spin {
+  -webkit-animation: icon-spin 2s infinite linear;
+  animation: icon-spin 2s infinite linear;
 }
 
 @keyframes fadeIn {
@@ -25,5 +36,27 @@
   }
   to {
     opacity: 1;
+  }
+}
+
+@-webkit-keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes icon-spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+    transform: rotate(359deg);
   }
 }
