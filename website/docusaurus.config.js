@@ -103,7 +103,7 @@ const config = {
       announcementBar: {
         id: 'pandoraAnnouncementBar-1', // Increment on change
         content:
-          '⭐️If you like Pandora, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/pandora">GitHub</a> ⭐️',
+          '⭐️ If you like Pandora, give it a star on <a target="_blank" rel="noopener noreferrer" href="https://github.com/arifszn/pandora">GitHub</a> ⭐️',
       },
       colorMode: {
         defaultMode: 'light',
